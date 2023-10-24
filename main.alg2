@@ -1,23 +1,7 @@
 This is makeindex, version 2.15 [TeX Live 2022/dev] (kpathsea + Thai support).
-Scanning style file ./main.ist
-** Input style error (file = ./main.ist, line = 2):
-   -- Unknown specifier <<<<<<<.
-** Input style error (file = ./main.ist, line = 5):
-   -- Unknown specifier =======.
-** Input style error (file = ./main.ist, line = 6):
-   -- Unknown specifier >>>>>>>.
-.............................done (29 attributes redefined, 3 ignored).
-Scanning input file main.acn2....
-!! Input index error (file = main.acn2, line = 20):
-   -- Missing arguments -- need two (premature LFD).
-
-!! Input index error (file = main.acn2, line = 41):
-   -- Missing arguments -- need two (premature LFD).
-
-!! Input index error (file = main.acn2, line = 53):
-   -- Missing arguments -- need two (premature LFD).
-done (51 entries accepted, 3 rejected).
-Sorting entries....done (351 comparisons).
-Generating output file main.acr2....done (47 lines written, 0 warnings).
+Scanning style file ./main.ist.............................done (29 attributes redefined, 0 ignored).
+Scanning input file main.acn2....done (51 entries accepted, 0 rejected).
+Sorting entries....done (330 comparisons).
+Generating output file main.acr2....done (48 lines written, 0 warnings).
 Output written in main.acr2.
 Transcript written in main.alg2.
