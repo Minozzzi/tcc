@@ -2,21 +2,104 @@
 
 \chapter{Materiais e Método}\label{cap:materialemetodos}
 
-A ênfase deste capítulo está em reportar o que e como será feito para alcançar o objetivo do trabalho. Este capítulo pode ser subdividido, inicialmente, em duas seções, sendo uma para os materiais e outra para os métodos.
+Este capítulo está estruturado em duas partes iniciais. A primeira aborda os elementos relacionados às ferramentas e tecnologias, enquanto a segunda se concentra na descrição do método, que compreende a sequência das principais atividades realizadas para a criação e evolução do sistema. Sendo a principal ferramenta utilizada para o desenvolvimento do projeto, a biblioteca React.
 
 \section{Materiais}\label{sec:materiais}
 
-Materiais são as ferramentas, as tecnologias, os ambientes de desenvolvimento e outros que são utilizados para realizar as atividades desde a definição dos requisitos à implantação do sistema. Exemplos de materiais: linguagens de programação e de modelagem, banco de dados e seus gerenciadores, editores para análise e modelagem, ambiente e plataforma de desenvolvimento.
+Esta seção fornece uma breve visão geral das principais ferramentas empregadas no desenvolvimento do sistema proposto.
 
-Cada um dos materiais pode ter uma subseção própria ou serem descritos em uma mesma seção. De qualquer forma, essa seção não precisa ser muito extensa, deve abranger apenas um conhecimento básico sobre cada um dos materiais e o que é mais relevante ou utilizado para o trabalho proposto. De maneira geral, não há necessidade de incluir informações históricas sobre os materiais. Centrar-se nos conceitos e particularidades mais relevantes para o trabalho. Exceto se necessário para o entendimento do objeto do trabalho ou considerado relevante para o tipo de pesquisa.
+\begin{tabframed}[htb]
+  \caption{Lista de ferramentas e tecnologias}
+  \label{quad:materiais}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{|l|l|l|l|}
+    \cline{1-4}
+    \textbf{Ferramenta/Tecnologia}    &
+    \textbf{Versão}                   &
+    \textbf{Disponível em}            &
+    \textbf{Finalidade}
+    \\ \cline{1-4}
+
+    \gls{VSCode}                      &
+    latest                            &
+    https://code.visualstudio.com/    &
+    Editor de código-fonte
+    \\ \cline{1-4}
+
+    TypeScript                        &
+    latest                            &
+    https://www.typescriptlang.org/   &
+    Lingugagem de programação
+    \\ \cline{1-4}
+
+    React                             &
+    18.x.x                            &
+    https://react.dev/                &
+    \multicolumn{1}{p{4cm}|}{\raggedright Biblioteca para construir \gls{UI} interativas e reativas em aplicações web}
+    \\ \cline{1-4}
+
+    Linaria                           &
+    5.x.x                             &
+    https://linaria.dev/              &
+    \multicolumn{1}{p{4cm}|}{\raggedright Biblioteca para estilização \textit{css-in-js}}
+    \\ \cline{1-4}
+
+    Storybook                         &
+    7.x.x                             &
+    https://storybook.js.org/         &
+    \multicolumn{1}{p{4cm}|}{\raggedright Documentar, testar e visualizar componentes de \gls{UI}}
+    \\ \cline{1-4}
+
+    LucidChart                        &
+                                      &
+    https://www.lucidchart.com/pages/ &
+    \multicolumn{1}{p{4cm}|}{\raggedright Ferramenta para criação de diagramas}
+    \\ \cline{1-4}
+
+    Figma                             &
+                                      &
+    https://www.figma.com/            &
+    \multicolumn{1}{p{4cm}|}{\raggedright Ferramenta para criação de protótipos de interfaces}
+    \\ \cline{1-4}
+
+    \multicolumn{1}{p{4cm}|}{\raggedright Planilhas eletrônicas disponibilizadas pelo \gls{IDR-PR}} 
+                                      &
+                                      &
+                                      &
+    \multicolumn{1}{p{4cm}|}{\raggedright Estudo do projeto e uso para levamento de requisitos}
+    \\ \cline{1-4}
+  \end{tabular}
+  \fonte{}%% Fonte
+\end{tabframed}
+
+\subsection{Visual Studio Code}\label{subsec:vscode}
+
+O \gls{VSCode}, é um popular \gls{IDE} desenvolvido pela Microsoft. Ele é conhecido por sua extrema flexibilidade, leveza e suporte a uma ampla variedade de linguagens de programação. O \gls{VSCode} oferece uma interface de usuário limpa e altamente personalizável, o que o torna uma escolha preferida para muitos desenvolvedores. Uma das características distintivas do \gls{VSCode} é a grande variedade de extensões disponíveis, que permitem aos desenvolvedores personalizar o ambiente de acordo com suas necessidades. Essas extensões abrangem desde suporte a linguagens específicas até ferramentas de depuração, controle de versão e integração com sistemas de gerenciamento de pacotes. Além disso, o \gls{VSCode} oferece uma experiência de depuração de primeira classe, tornando-o ideal para o desenvolvimento de aplicativos complexos \cite{Sole:2019:VisualStudioCodeDistilled}.
+
+\subsection{TypeScript}\label{subsec:typescript}
+
+O TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft, projetada para ser uma extensão do JavaScript. O que a torna única é a adição de tipagem estática, permitindo que os desenvolvedores definam tipos de dados para variáveis, parâmetros e retornos de funções. Essa tipagem estática ajuda a detectar erros em tempo de compilação, tornando o código mais seguro e menos propenso a bugs \cite{Bierman:2014:UnderstandingTypeScript}.
+
+\subsection{React}\label{subsec:react}
+
+O React é uma biblioteca de \gls{UI} criada pela Meta com o propósito de simplificar a construção de componentes reutilizáveis, que podem ser interativos e possuir estados \cite{Kumar:2016:ComparativeAnalysisAngularJSReactJS}.
+
+Viabiliza o desenvolvimento de aplicativos \textit{web} de grande porte e complexidade, capacitando-os a efetuar alterações nos dados sem a necessidade de atualizar páginas completas. Isso implica que a arquitetura central do React desempenha o papel de "V" (\textit{View}) no padrão de design \gls{MVC} \cite{Aggarwal:2018:ModernWebDevelopmentUsingReactJS}. De acordo com \citeonline{Vipul:2016:ReactJSByExampleBuildingModernWebApplications}, o React elabora abstrações das visualizações ao dividir essas visualizações em componentes distintos.
+
+Além disso, o React se baseia na premissa de que a manipulação do \gls{DOM} é uma tarefa dispendiosa que precisa ser minimizada. Além disso, reconhece que otimizar manualmente a manipulação do \gls{DOM} resultaria em uma quantidade considerável de código repetitivo e propenso a erros. O React aborda esse problema disponibilizando aos desenvolvedores um \gls{DOM} virtual para renderização em vez do \gls{DOM} real. Ele identifica as discrepâncias entre o \gls{DOM} real e o \gls{DOM} virtual, executando o mínimo de operações do \gls{DOM} necessárias para alcançar o novo estado \cite{Vipul:2016:ReactJSByExampleBuildingModernWebApplications}.
 
 \section{Método}\label{sec:metodo}
 
-Os métodos definem, de certa maneira, um plano geral do trabalho, com as principais atividades realizadas durante seu processo de desenvolvimento. São apenas as atividades, o que será feito e o que se espera obter com as mesmas. O que é obtido com a realização dessas atividades está no \autoref{cap:resultados}. 
+Para o desenvolvimento deste projeto, será adotada uma abordagem ágil, conforme sugerido por \citeonline{Pontes:2019:MetodologiasAgeisDesenvolvimentoSoftwares}. A metodologia ágil permitirá a coleta contínua de feedbacks ao longo das sprints e marcos do projeto, visando efetuar melhorias com base nesses retornos.
+Além disso, a metodologia ágil permitirá a adaptação do projeto às mudanças de requisitos e necessidades do cliente, que poderão ocorrem durante o desenvolvimento.
 
-Os métodos são, basicamente, uma sequência de atividades realizadas para definir o sistema, modelar o problema e a solução, implementar a solução, testar e implantar essa solução. Essas atividades devem enfatizar a forma de uso dos materiais de acordo com o referencial teórico e como foi procedido no sentido de alcançar os objetivos do trabalho.
-Os métodos incluem os procedimentos utilizados para se alcançar o objetivo do trabalho. Assim, ele abrange o ciclo de vida do sistema, da identificação do problema à implantação da solução. A identificação pode incluir a definição dos requisitos por parte do usuário e/ou cliente definindo a proposta do sistema. A implantação pode incluir a forma de gerar os instaladores, os recursos e forma de instalação do sistema, a forma de manutenção e de descontinuidade do sistema.
+Inicialmente, para a coleta dos requisitos, foram feitas análises minuciosas das informações fornecidas pelos técnicos do \gls{IDR-PR}, que desempenham um papel fundamental na área em questão. Além disso, foi examinado de perto os documentos disponibilizados por esses profissionais, buscando uma compreensão abrangente das necessidades e desafios presentes. Através dessa abordagem, foi permitido obter uma visão completa e embasada para que o projeto possa avançar. Deste modo, possibilitando profundo entendimento dos procedimentos corriqueiros indispensáveis do sistema e das dificuldades enfrentadas pelos técnicos.
 
-A definição das atividades, passos, ou procedimentos que compõem os métodos podem (ou mesmo deve) estarem baseados em autores. Esses autores, normalmente, estão relacionados à engenharia de software.
+Através da utilização de aplicações de criação de planilhas eletrônicas, os técnicos do \gls{IDR-PR} realizam o gerenciamento dos dados das propriedades que estão sob sua supervisão. Essas planilhas fornecem uma base sólida para análisar e coletar os dados necessários para o sistema, bem como compreender a interação entre eles.
 
-O tempo verbal a ser utilizado na descrição dos métodos é o passado, considerando que trata-se de métodos que foram aplicados para a obtenção dos resultados a serem apresentados.
+Após entendimento das funcionalidades e de como os dados se comportam através dos documentos fornecidos, foi possível o levantamento dos requisitos funcionais e não funcionais do sistema, tal como a diagramação dos casos de uso.
+
+Na etapa subsequente, procederá à prototipação do sistema, incluindo suas interfaces, com o propósito de aprimorar a compreensão do que será desenvolvido. Isso irá possibilitar a eliminação de elementos desnecessários e a realização de testes para avaliar a experiência do usuário no sistema.
+
+A seguir, o processo de desenvolvimento dos códigos-fonte da aplicação será iniciado. Simultaneamente, os testes do sistema serão conduzidos com o intuito de reduzir e corrigir eventuais erros durante a etapa de desenvolvimento.
+
