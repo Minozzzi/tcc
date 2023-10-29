@@ -71,6 +71,7 @@
 %%    -- Cores nos vínculos (padrões: citecolor = green, filecolor = cyan, linkcolor = red, urlcolor = magenta)
 \definecolor{bblue}{rgb}{0, 0, 0.25}%% Definição do azul escuro (modificado)
 \definecolor{gray}{rgb}{0.5, 0.5, 0.5}%% Definição do cinza (modificado)
+\definecolor{modifiedLightgray}{RGB}{209, 209, 209}
 \def\@cordosvinculos{black}%% Preto
 \DeclareOption{vinculoscoloridos}{\typeout{-----> Option: vinculoscoloridos}\def\@cordosvinculos{bblue}}%% Azul escuro
 \def\@citecolor{\@cordosvinculos}%% Cor das citações
