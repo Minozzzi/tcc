@@ -2,22 +2,30 @@
 
 \chapter{Resultados}\label{cap:resultados}
 
-Este capítulo apresenta o que foi obtido como resultado do trabalho, que, em princípio, é o sistema desenvolvido. Se não for um sistema, como, por exemplo, uma solução na área de redes, neste capítulo é reportada a solução proposta. Neste caso, a divisão do capítulo em seções é realizada, se necessária, de acordo com o trabalho.
+Este capítulo descreve os resultados preliminares do trabalho, que é um cliente \textit{web}, com foco no controle de gestão de propriedades rurais, acompanhamento de animais nas propriedades rurais e gerenciamento financeiro da propriedade, entre outras funcionalidades. 
 
-O capítulo pode conter seções de acordo com o tipo de sistema e a necessidade de documentação mais extensa de determinados aspectos. Caso o trabalho se refira à comparação entre tecnologias ou dados obtidos como resultados do uso do sistema, além da descrição do sistema, há os dados obtidos com os testes e a discussão desses dados. Nesse caso haverá uma seção para os dados obtidos desses testes e as discussões.
+Em seguida, será abordado o escopo, destacando as principais funcionalidades e os atores envolvidos. Em seguida, abordaremos a modelagem do sistema, que compreende a definição dos requisitos funcionais e não funcionais, juntamente com a elaboração dos diagramas de casos de uso e do modelo de entidade e relacionamento do banco de dados.
 
 \section{Escopo do sistema}\label{sec:escopoSistema}
 
-Apresenta o escopo do sistema (contendo entre dois ou cinco parágrafos) de forma bastante sucinta, considerando aspectos técnicos e conceituais. O escopo define o que é o sistema, consistindo das funcionalidades e características que o sistema deve conter. É importante apresentar também o escopo negativo, ou seja, as funcionalidades e características que o sistema não irá conter. 
-Exemplo:
+O cliente \textit{web} para gerenciamento de gado leiteiro será principalmente utilizado por técnicos do \gls{IDR-PR}. Sendo a principal finalidade o controle e manuseio dos dados, a fim de evitar incoerência nos registros coletados. A plataforma \textit{web} consumirá dados de uma \gls{API} \gls{REST} que está em desenvolvimento e manutenção em paralelo ao desenvolvimento deste trabalho.
 
-O sistema XYZ deve gerenciar todos os processos de uma livraria virtual, desde a aquisição até a venda dos livros para o consumidor final. O acesso dos compradores e gerentes deve ser feito por meio de um site WEB, incluindo a possibilidade de acesso por outras tecnologias (ex. celular, tablet). Os clientes poderão fazem as compras pagando com cartão de crédito ou depósito bancário. Existem promoções eventuais pelas quais os livros podem ser comprados com desconto.
+Cada técnico poderá fazer o gerenciamento dos dados da propriedade vinculado, bem como dados do rebanho, dados financeiros, dados de insumos e produtos e dados de plantações.
 
-De início, a livraria vai trabalhar apenas com livros novos a serem adquiridos de editoras que tenham sistema automatizado de aquisição. Desta forma, o sistema a ser desenvolvido deve conectar-se aos sistemas das editoras para efetuar as compras.
+O sistema iniciará com uma página de autenticação, caso o técnico ainda não possua cadastro ele poderá cadastrar-se. Vale ressaltar que uma propriedade pode ser relacionada a um ou mais técnicos, os técnicos só poderão analisar dados das propriedades em que estão vinculados. Estão incluídos no sistema além de cadastro e autenticação do técnico, o módulo de propriedades, módulo financeiro, módulo de animais, produtos e insumos e o módulo de plantações, sendo que exceto o módulo de propriedade, os demais são sempre referentes a uma propriedade.
 
-O sistema deve calcular o custo de entrega baseado no peso dos livros e na distância do ponto de entrega. Eventualmente podem haver promoções do tipo “entrega gratuita” para determinadas localidades.
+No módulo dedicado às propriedades, serão cadastrados diversos dados importantes, incluindo informações sobre o produtor, colaboradores, a área destinada à bovinocultura (em hectares), coordenadas de localização e uma imagem representativa da propriedade.
 
-O sistema deve permitir a um gerente emitir relatórios de livros mais vendidos, e compradores mais assíduos, bem como sugerir compras para compradores baseadas em seus interesses anteriores.
+Na seção voltada aos animais, serão registradas informações abrangentes, tais como dados sobre partos, inseminações, casos de mastite, doenças, medicamentos administrados, diagnósticos de prenhez, além de detalhes sobre vendas, compras e óbitos de animais.
+
+No módulo relacionado às plantações, haverá um controle rigoroso sobre informações envolvendo pragas e doenças, abrangendo a identificação da cultura afetada, o tipo de praga ou doença identificada e o grau de infestação presente.
+
+No que concerne ao módulo financeiro, serão meticulosamente gerenciados registros de receitas e despesas. Tais registros incluirão datas, tipos, quantidades, valores expressos em reais e descrições detalhadas, com a possibilidade de realizar agrupamentos para uma análise mais precisa.
+
+No módulo de produtos e insumos, os usuários terão a capacidade de controlar detalhes referentes aos produtos utilizados, quantidade empregada, data de aplicação e o propósito da utilização específica.
+
+Dessa maneira, todas as informações referentes à uma propriedade rural serão armazenadas e servirão como subsídio para que os técnicos possam auxiliar na melhora da produtividade dessas propriedades.
+
 
 \section{Modelagem do sistema}\label{sec:modelagemSistema}
 
@@ -37,11 +45,11 @@ Apresenta as funcionalidades e o uso de recursos tecnológicos do sistema por me
 A \autoref{fig:cadastroPaciente} exibe a tela de acesso ao Cadastro de Pacientes.
 
 \begin{figure}[htpb]%% Ambiente figure
-\captionsetup{width=0.43\textwidth}
-\caption{Tela de acesso ao Cadastro de Pacientes.}%% Legenda
-\label{fig:cadastroPaciente}%% Rótulo
-\includegraphics[scale=0.8]{cadastro-paciente}%% Dimensões e localização
-\fonte{}%% Fonte
+  \captionsetup{width=0.43\textwidth}
+  \caption{Tela de acesso ao Cadastro de Pacientes.}%% Legenda
+  \label{fig:cadastroPaciente}%% Rótulo
+  \includegraphics[scale=0.8]{cadastro-paciente}%% Dimensões e localização
+  \fonte{}%% Fonte
 \end{figure}
 
 \section{Implementação do sistema}\label{sec:implementacaoSistema}
@@ -63,8 +71,8 @@ Quando for necessário, citar no texto do trabalho nomes de campos, tabelas ou r
 Um exemplo de listagem de código fonte pode ser observado na \autoref{codigo:classeFoo}, que representa a classe Aluno.
 
 \begin{sourcecode}[htb]
-\caption{\label{codigo:classeFoo}Classe Aluno}
-\begin{lstlisting}[frame=single, language=Java]
+  \caption{\label{codigo:classeFoo}Classe Aluno}
+  \begin{lstlisting}[frame=single, language=Java]
 @Entity
 public class Foo {
  
@@ -79,11 +87,11 @@ public class Foo {
     // constructor, getters and setters
 }
 \end{lstlisting}
-\fonte{}
+  \fonte{}
 \end{sourcecode}
 
-\section{Discussões (opcional)}\label{sec:discussoes} 
+\section{Discussões (opcional)}\label{sec:discussoes}
 
 O trabalho contém esta seção quando considerado que há resultados (em termos de dados) e discussões relevantes ou suficientes para justificar uma seção. Se existentes e não justificarem uma seção, eles podem estar na seção que relata a implementação do sistema.
 
-Nesta seção estão os resultados obtidos da realização de testes quantitativos e qualitativos, independentemente da quantidade, tipo e volume de testes realizados. Os resultados dos testes são discutidos tendo como base o referencial teórico e os objetivos pretendidos com o trabalho. Esses testes podem resultar de implantação e testes de uso do sistema. 
+Nesta seção estão os resultados obtidos da realização de testes quantitativos e qualitativos, independentemente da quantidade, tipo e volume de testes realizados. Os resultados dos testes são discutidos tendo como base o referencial teórico e os objetivos pretendidos com o trabalho. Esses testes podem resultar de implantação e testes de uso do sistema.
