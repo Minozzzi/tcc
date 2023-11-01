@@ -254,7 +254,7 @@ O requisito funcional descrito no \autoref{quad:requisitoManterAnimais}  aborda 
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de medicamentos aplicados em animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir vincular um medicamento previamente cadastrado a ser utilizado na aplicação, a forma da aplicação a dose e o princípio ativo.}
     \\ \cline{1-2}
 
-    NF 5.10 Controle de prenhez                &
+    NF 5.10 Controle de prenhez               &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de prenhez dos animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de diagnóstico e atualizar a data do último diagnóstico.}
     \\ \cline{1-2}
 
@@ -479,23 +479,23 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegular}  aborda 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 10.1 Segurança de Acesso                &
+    NF 10.1 Segurança de Acesso               &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
     \\ \cline{1-2}
 
-    NF 10.2 Auditoria de Acesso                &
+    NF 10.2 Auditoria de Acesso               &
     \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
     \\ \cline{1-2}
 
-    NF 10.3 Desempenho Eficiente               &
+    NF 10.3 Desempenho Eficiente              &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
     \\ \cline{1-2}
 
-    NF 10.4 Disponibildiade de forragem &
+    NF 10.4 Disponibildiade de forragem       &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir o cadastro de disponibildiade de forragem, para um novo registro os campos como data, forregeira, entrada em centímetros, resíduo em centímetros, quilogramas por metro quadrado, área piquete em metros quadrados, eficiência em porcentagem, número de vacas e o quilograma de MN/Vaca devem ser preenchidos.}
     \\ \cline{1-2}
 
-    NF 10.5  Dados de bezzeras e novilhas                 &
+    NF 10.5  Dados de bezzeras e novilhas     &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir o cadastro de bezerras e novilhas, para um novo registro os campos como identificação do animal, tipo de raça, data de nascimento, peso ao nascer, peso atual e \gls{ECC} devem ser preenchidos. Caso seja um animal existente as informações serão recuperadas através da identificação do animal e preenchidas nos campos, sem haver necessidade de preenchimento manual, exceto os campos de \gls{ECC} e pesagem atual. O sistema deve impedir o relacionamento de vacas com relação de parto, venda ou óbito. Ao final do prenchimento dos dados do animal, o sistema deve gerar resultados referente ao mesmo.}
     \\ \cline{1-2}
 
@@ -503,16 +503,54 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegular}  aborda 
     \multicolumn{1}{|p{8cm}|}{\raggedright Se houver animais em aleitamento, o sistema deve permitir o registro de formulação de ração para as bezerras.}
     \\ \cline{1-2}
 
-    NF 10.7 Formulação de ração para novilhas & 
+    NF 10.7 Formulação de ração para novilhas &
     \multicolumn{1}{|p{8cm}|}{\raggedright Se houver animais jovens, que estejam na fase entre a desmama e o pré parto das primíapras, o sistema deve permitir o registro de formulação de ração para as novilhas.}
     \\ \cline{1-2}
 
-    NF 10.8 Dados de vacas e balancemaneto &
+    NF 10.8 Dados de vacas e balancemaneto    &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir o cadastro de vacas na visita, caso o animal buscado já esteja inserido na propriedade o técnico apenas terá que atualizar campos como \gls{ECC}, peso vivo, produção de leite, teor de gorudra, teor de protiína, contagem de céluas osmáticas, contagem padrão em palca e nitrogênio ureico no leite.}
     \\ \cline{1-2}
 
-    NF 10.9 Formulação de ração para vacas & 
+    NF 10.9 Formulação de ração para vacas    &
     \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir a formulação de ração para vacas após preenchimento dos dados das vacas, onde o técnico irá inserir os alimentos de acordo com a disponibilidade.}
+    \\ \cline{1-2}
+  \end{tabular}
+  \fonte{} % Fonte
+\end{tabframed}
+
+No \autoref{quad:requisitoCadastroProdutor} é apresentado o requisito funcional de Cadastro de Produtor, que é fundamental para as propriedades. Os requisitos não funcionais relacionados a este requisito descrevem os dados necessários para efetuar o registro do produtor, incluindo informações relevantes ao processo de criação da conta.
+
+\begin{tabframed}[htb]
+  \caption{Cadastro do produtor}
+  \label{quad:requisitoCadastroProdutor}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|l|l|}
+    \cline{1-2}
+    \multicolumn{2}{|l|}{\textbf{F11 - Cadastro do produtor} }
+    \\ \cline{1-2}
+
+    \multicolumn{2}{|p{15cm}|}{
+    \raggedright \textbf{Descrição:} O sistema deve permitir o cadastro de produtores para vincular em propriedades. O sistema deve solicitar as informações necessárias para criar um produtor, incluindo nome completo, CPF, email e telefone.
+    }
+    \\ \cline{1-2}
+
+    \multicolumn{2}{|l|}{\textbf{Requisitos Não-Funcionais}}
+    \\ \cline{1-2}
+
+    \textbf{Nome}                   &
+    \textbf{Restrição}
+    \\ \cline{1-2}
+
+    NF 11.1 Segurança de Dados      &
+    \multicolumn{1}{|p{8cm}|}{\raggedright Os dados dos produtores, incluindo informações pessoais, devem ser armazenados de forma segura e protegidos contra acesso não autorizado.}
+    \\ \cline{1-2}
+
+    NF 11.2 Validações ao cadastrar &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve validar os dados informados pelo usuário e não deve permitir cadastro em situações de email ou CPF já existente.}
+    \\ \cline{1-2}
+
+    NF 11.3 Usabilidade             &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O processo de cadastro deve ser intuitivo e fácil de ser realizado, com instruções claras para o usuário. O sistema deve fornecer feedback imediato em caso de erros ou campos obrigatórios não preenchidos.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
