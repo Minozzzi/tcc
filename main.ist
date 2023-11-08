@@ -1,9 +1,5 @@
 % makeindex style file created by the glossaries package
-<<<<<<< HEAD
 % for document 'main' on 2023-11-9
-=======
-% for document 'main' on 2023-11-7
->>>>>>> eb4d145 (feat: adiciona casos de uso e diagrama de casos de uso)
 actual '?'
 encap '|'
 level '!'
