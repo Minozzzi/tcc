@@ -2,7 +2,7 @@
 
 \chapter{Resultados}\label{cap:resultados}
 
-Este capítulo descreve os resultados preliminares do trabalho, que é um cliente \textit{web}, com foco no controle de gestão de propriedades rurais, acompanhamento de animais nas propriedades rurais e gerenciamento financeiro da propriedade, entre outras funcionalidades. 
+Este capítulo descreve os resultados preliminares do trabalho, que é um cliente \textit{web}, com foco no controle de gestão de propriedades rurais, acompanhamento de animais nas propriedades rurais e gerenciamento financeiro da propriedade, entre outras funcionalidades.
 
 Em seguida, será abordado o escopo, destacando as principais funcionalidades e os atores envolvidos. Em seguida, abordaremos a modelagem do sistema, que compreende a definição dos requisitos funcionais e não funcionais, juntamente com a elaboração dos diagramas de casos de uso e do modelo de entidade e relacionamento do banco de dados.
 
@@ -30,7 +30,7 @@ Dessa maneira, todas as informações referentes à uma propriedade rural serão
 \section{Modelagem do sistema}\label{sec:modelagemSistema}
 
 Nesta seção, são delineados os requisitos funcionais e não funcionais, os casos de uso e os diagramas que descrevem pormenorizadamente os processos e a estrutura do sistema a ser desenvolvido. Cada requisito funcional é introduzido, seguido dos requisitos não funcionais pertinentes.
-Os requisitos funcionais são detalhados entre o \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoVisitaRegular}, enquanto os requisitos não funcionais são apresentados nos quadros correspondentes, do \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoVisitaRegular}, respectivamente.
+Os requisitos funcionais são detalhados entre o \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoCadastroProdutor}, enquanto os requisitos não funcionais são apresentados nos quadros correspondentes, do \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoCadastroProdutor}, respectivamente.
 
 \subsection{Requisitos funcionais e não funcionais}\label{subsec:requisitosFuncionaisNaoFuncionais}
 
@@ -563,6 +563,92 @@ No \autoref{quad:requisitoCadastroProdutor} é apresentado o requisito funcional
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
+
+\subsection{Casos de uso}\label{subsec:casosDeUso}
+No \autoref{quad:casosDeUso} são listados os casos de uso, os atores e os requisitos funcionais que estã associados em cada um dos casos.
+
+\begin{tabframed}[htb]
+  \caption{Casos de Uso}
+  \label{quad:casosDeUso}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|l|l|l|l|}
+    \cline{1-4}
+    \textbf{Id}             &
+    \textbf{Nome}           &
+    \textbf{Atores}         &
+    \textbf{Referências Cruzadas}
+    \\
+
+    \cline{1-4}
+    UC1                     &
+    Adicionar novo registro &
+    Administrador           &
+    F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC2                     &
+    Editar registro         &
+    Administrador           &
+    F1, F2, F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC3                     &
+    Apagar registro         &
+    Administrador           &
+    F1, F2, F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC4                     &
+    Listar registros        &
+    Administrador           &
+    F1, F2, F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC5                     &
+    Adicionar novo registro &
+    Técnico                 &
+    F1, F3, F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC6                     &
+    Editar registro         &
+    Técnico                 &
+    F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC7                     &
+    Apagar registro         &
+    Técnico                 &
+    F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+    UC8                     &
+    Listar registros        &
+    Técnico                 &
+    F4, F5, F6, F7, F8, F9, F10, F11
+    \\
+
+    \cline{1-4}
+  \end{tabular}
+  \fonte{} % Fonte
+\end{tabframed}
+
+A \autoref{fig:casosDeUso} apresenta o diagrama dos casos de uso do sistema, exibindo os atores e as conexões com cada caso de uso.
+
+\begin{figure}[htpb]
+  \captionsetup{width=0.5\textwidth}
+  \caption{Diagrama de Casos de Uso}
+  \label{fig:casosDeUso}
+  \includegraphics[scale=0.2]{idr-use-case-diagram}
+  \fonte{}
+\end{figure}
 
 \section{Apresentação do sistema}\label{sec:apresentacaoSistema}
 
