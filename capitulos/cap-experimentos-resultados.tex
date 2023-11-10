@@ -26,7 +26,6 @@ No módulo de produtos e insumos, os usuários terão a capacidade de controlar 
 
 Dessa maneira, todas as informações referentes à uma propriedade rural serão armazenadas e servirão como subsídio para que os técnicos possam auxiliar na melhora da produtividade dessas propriedades.
 
-
 \section{Modelagem do sistema}\label{sec:modelagemSistema}
 
 Nesta seção, são delineados os requisitos funcionais e não funcionais, os casos de uso e os diagramas que descrevem pormenorizadamente os processos e a estrutura do sistema a ser desenvolvido. Cada requisito funcional é introduzido, seguido dos requisitos não funcionais pertinentes.
@@ -744,60 +743,3 @@ A \autoref{fig:idr-er-diagram-green}, \autoref{fig:idr-er-diagram-yellow} e \aut
   \includegraphics[scale=0.140]{idr-er-diagram-grey}
   \fonte{}
 \end{figure}
-\section{Apresentação do sistema}\label{sec:apresentacaoSistema}
-
-Apresenta as funcionalidades e o uso de recursos tecnológicos do sistema por meio de suas telas, enfatizando a interação com o sistema. A apresentação do sistema é feita sob a forma de texto, com telas e definição de padrões que forem relevantes ao contexto do trabalho. As telas são tratadas como figuras, cópias (print screen) de relatórios ou consultas também são figuras.
-
-A \autoref{fig:cadastroPaciente} exibe a tela de acesso ao Cadastro de Pacientes.
-
-\begin{figure}[htpb]%% Ambiente figure
-  \captionsetup{width=0.43\textwidth}
-  \caption{Tela de acesso ao Cadastro de Pacientes.}%% Legenda
-  \label{fig:cadastroPaciente}%% Rótulo
-  \includegraphics[scale=0.8]{cadastro-paciente}%% Dimensões e localização
-  \fonte{}%% Fonte
-\end{figure}
-
-\section{Implementação do sistema}\label{sec:implementacaoSistema}
-
-Nesta seção é documentada a implementação do sistema com partes relevantes ou exemplos de código, rotinas, funções. Inclui, ainda, a descrição técnica do uso de recursos (componentes, bibliotecas, etc.) da linguagem. Ressalta-se que cada orientador avaliará juntamente com seu orientado o que poderá ser descrito nesta seção. Isso sem que sejam revelados detalhes do sistema que possam comprometer seu uso comercial ou científico ou que a descrição fique muito sucinta ou superficial.
-
-Em materiais e método estão quais os recursos utilizados, neste capítulo é reportado como esses recursos foram utilizados para resolver o problema.
-
-Sugere-se colocar listagens curtas de código, enfatizando aspectos específicos das tecnologias utilizadas ou da implementação. Sugere-se, ainda, que o código não seja apresentado sob a forma de print screen, e sim copiado e colado no texto, mantendo, se possível, a formatação. Todas as listagens de código devem ser devidamente explicadas. A explicação deve ser técnica, fundamentada em aspectos conceituais e boas práticas de programação.
-
-Enfatizar os diferenciais do sistema: procedimentos armazenados, consultas SQL, uso de componentes, uso de padrões de projeto, a forma de uso dos recursos da linguagem. Esses diferenciais são no sentido de explicitar as vantagens, desvantagens, dificuldades e facilidades que esses recursos impetraram no desenvolvimento do sistema em termos técnicos. Esses diferenciais servirão para avaliar pela utilização ou não desses recursos, pelo menos para sistemas iguais ou semelhantes ao reportado no trabalho.
-
-Reportar a forma como o sistema foi verificado e validado. No sentido de verificar se os requisitos definidos para o mesmo foram atendidos. Os testes podem ser realizados pelo professor orientador, pelos professores que compõem a banca, por pessoas que serviram de base para as informações para o sistema e etc. Os testes podem ser realizados com base em um plano de testes elaborado juntamente com a análise e projeto do sistema. Para validar a implementação podem ser desenvolvidas rotinas de teste unitário.
-
-Se houver implantação do sistema, mesmo que seja para teste, reportar a forma como isso foi feito, a geração de instaladores, os problemas com ambiente e sistema operacional, incluindo banco de dados e outros. Deixar explícito o procedimento para instalar e usar o sistema.
-
-Quando for necessário, citar no texto do trabalho nomes de campos, tabelas ou rotinas específicas utilizadas na implementação de um software, utilizar a fonte courier new para destacar esses nomes.
-
-Um exemplo de listagem de código fonte pode ser observado na \autoref{codigo:classeFoo}, que representa a classe Aluno.
-
-\begin{sourcecode}[htb]
-  \caption{\label{codigo:classeFoo}Classe Aluno}
-  \begin{lstlisting}[frame=single, language=Java]
-@Entity
-public class Foo {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String nome;
-
-    private Integer ra;
-
-    // constructor, getters and setters
-}
-\end{lstlisting}
-  \fonte{}
-\end{sourcecode}
-
-\section{Discussões (opcional)}\label{sec:discussoes}
-
-O trabalho contém esta seção quando considerado que há resultados (em termos de dados) e discussões relevantes ou suficientes para justificar uma seção. Se existentes e não justificarem uma seção, eles podem estar na seção que relata a implementação do sistema.
-
-Nesta seção estão os resultados obtidos da realização de testes quantitativos e qualitativos, independentemente da quantidade, tipo e volume de testes realizados. Os resultados dos testes são discutidos tendo como base o referencial teórico e os objetivos pretendidos com o trabalho. Esses testes podem resultar de implantação e testes de uso do sistema.
