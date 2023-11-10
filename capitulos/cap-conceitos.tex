@@ -43,13 +43,45 @@ No processo de balanceamento nutricional para animais, conforme estabelecido por
 
 Com o objetivo de satisfazer as necessidades dos animais, torna-se imprescindível a seleção de alimentos com base em seu valor nutricional. Para alcançar esse propósito, é fundamental que cada tipo de alimento apresente sua composição química, o que determinará a quantidade a ser considerada durante o processo de balanceamento \cite{Tomich:2015:NutricaoPrecisaoPecuariaLeiteira}.
 
-Visando atender às necessidades nutricionais dos animais, foram definidos métodos práticos para formulação de rações \cite{Salman2020:ManualFormulacaoRacaoVacasLeiteiras}. Sendo eles:
+Visando atender às necessidades nutricionais dos animais, foram definidos métodos práticos para formulação de rações \cite{Salman2020:ManualFormulacaoRacaoVacasLeiteiras}. Sendo eles, o método algébrico e o método do quadrado de Pearson.
 
-\begin{itemize}
-  \item Método algébrico, é um método que viabiliza a fusão de dois ou mais componentes e envolve a formulação de um sistema de equações simultâneas, onde as incógnitas correspondem aos componentes a serem incorporados na ração. A complexidade desse método aumenta de maneira gradual à medida que se incluem um maior número de componentes e nutrientes no cálculo.
+O método algébrico, viabiliza a fusão de dois ou mais componentes e envolve a formulação de um sistema de equações simultâneas, onde as incógnitas correspondem aos componentes a serem incorporados na ração. A complexidade desse método aumenta de maneira gradual à medida que se incluem um maior número de componentes e nutrientes no cálculo.
 
-  \item Método do Quadrado de Pearson, é de natureza direta e permite a determinação das proporções de dois componentes em uma mistura, com o intuito de atingir um nível de nutriente específico, geralmente a proteína. Este método viabiliza o uso de dois alimentos ou conjuntos de alimentos que tenham sido previamente mesclados.
-\end{itemize}
+Um exemplo prático desse método pode ser ilustrado ao considerar uma ração concentrada com 18\% de \gls{PB}, composta por farelo de algodão (representado como X) e grãos de milho (representados como Y) em uma quantidade total de 100 kg. A equação que modela essa situação é a seguinte:
+
+Equação (1): 
+\[X + Y = 100\]
+
+Isolando a variável Y, obtemos a Equação (2):
+\[Y = 100 - X\]
+
+Substituindo a Equação (2) na Equação (1), obtém-se a Equação (3): 
+\[
+  X + (100 - X) = 100
+\]
+
+Ao incorporar os teores de \gls{PB} da ração (18\%), do farelo de algodão (35,65\%) e dos grãos de milho (14,5\%) na Equação (3), tem-se:
+\[
+  35,65 (X) + 14,5 (100 - X) = 18 (100)
+\]
+
+Onde:
+\[35,65X + 1450 - 14,5X = 1800\]
+\[21,15X = 350\]
+\[X = 350 / 21,54 = 16,55\%\]
+
+Substituindo o valor de X na Equação (2), encontramos a quantidade de milho (Y) na ração:
+\[Y = 100 — 16,55 = 83,45\%\]
+
+Portanto, a ração será constituída de 16,55\% de farelo de algodão e 16,55\% de grão de milho.
+
+O Método do Quadrado de Pearson, é de natureza direta e permite a determinação das proporções de dois componentes em uma mistura, com o intuito de atingir um nível de nutriente específico, geralmente a proteína. Este método viabiliza o uso de dois alimentos ou conjuntos de alimentos que tenham sido previamente mesclados.
+
+Um exemplo prático que ilustra este método é o balanceamento de uma ração concentrada contendo 18\% de \gls{PB} e 80\% de \gls{NDT} utilizando o método do Quadrado de Pearson. Neste método, consideramos os teores de proteína dos ingredientes disponíveis, como o grão de milho moído e o farelo de soja, com teores de 9,82\% e 47,64\% de \gls{PB}, respectivamente.
+
+O processo inicia-se pela construção de um esquema quadrado, onde o valor do teor de \gls{PB} da mistura é colocado no centro do quadrado. À esquerda, são inseridos os teores de \gls{PB} dos dois ingredientes da mistura, enquanto à direita são registradas as diferenças numéricas entre os valores dos ingredientes e o teor de \gls{PB} da mistura ($18 - 9,82 = 8,18$ e $47,64 - 18 = 29,64$).
+
+Dessa forma, para 37,82 kg da mistura, será necessário utilizar 29,64 kg de milho e 8,18 kg de farelo de soja. Portanto, para 100 kg da mistura, serão necessários 78,37 kg de milho $(29,64 / 37,82)*100$ e 8,18 kg de farelo de soja $(8,18/37,82)*100$.
 
 Diante da extensiva quantidade de dados que necessita ser processada para alcançar um resultado, ressalta-se a crucial relevância de um sistema de informação que seja capaz de armazenar e analisar os registros, proporcionando eficiência e celeridade no desempenho das tarefas.
 
