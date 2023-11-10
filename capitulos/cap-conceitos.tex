@@ -47,41 +47,79 @@ Visando atender às necessidades nutricionais dos animais, foram definidos méto
 
 O método algébrico, viabiliza a fusão de dois ou mais componentes e envolve a formulação de um sistema de equações simultâneas, onde as incógnitas correspondem aos componentes a serem incorporados na ração. A complexidade desse método aumenta de maneira gradual à medida que se incluem um maior número de componentes e nutrientes no cálculo.
 
-Um exemplo prático desse método pode ser ilustrado ao considerar uma ração concentrada com 18\% de \gls{PB}, composta por farelo de algodão (representado como X) e grãos de milho (representados como Y) em uma quantidade total de 100 kg. A equação que modela essa situação é a seguinte:
+Um exemplo prático desse método pode ser ilustrado ao considerar uma ração concentrada com 18\% de \gls{PB}, composta por farelo de algodão (representado como X) e grãos de milho (representados como Y) em uma quantidade total de 100 kg, valores baseados em \citeonline{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}. A equação que modela essa situação é a seguinte:
 
-Equação (1): 
-\[X + Y = 100\]
+\begin{equation}
+  \label{eq:algebrico1}
+  X + Y = 100
+\end{equation}
 
-Isolando a variável Y, obtemos a Equação (2):
-\[Y = 100 - X\]
+Isolando a variável Y, obtemos:
+\begin{equation}
+  \label{eq:algebrico2}
+  Y = 100 - X
+\end{equation}
 
-Substituindo a Equação (2) na Equação (1), obtém-se a Equação (3): 
-\[
+Substituindo a \seqref{eq:algebrico2} na \seqref{eq:algebrico1}, obtém-se:
+\begin{equation}
+  \label{eq:algebrico3}
   X + (100 - X) = 100
-\]
+\end{equation}
 
-Ao incorporar os teores de \gls{PB} da ração (18\%), do farelo de algodão (35,65\%) e dos grãos de milho (14,5\%) na Equação (3), tem-se:
-\[
+Ao incorporar os teores de \gls{PB} da ração (18\%), do farelo de algodão (35,65\%) e dos grãos de milho (14,5\%) na \seqref{eq:algebrico3}, tem-se:
+\begin{equation}
+  \label{eq:algebrico4}
   35,65 (X) + 14,5 (100 - X) = 18 (100)
-\]
+\end{equation}
 
 Onde:
-\[35,65X + 1450 - 14,5X = 1800\]
-\[21,15X = 350\]
-\[X = 350 / 21,54 = 16,55\%\]
+\begin{equation}
+  \label{eq:algebrico5}
+  35,65X + 1450 - 14,5X = 1800
+\end{equation}
+\begin{equation}
+  \label{eq:algebrico6}
+  21,15X = 350
+\end{equation}
+\begin{equation}
+  \label{eq:algebrico7}
+  X = 350 / 21,54 = 16,55\%
+\end{equation}
 
-Substituindo o valor de X na Equação (2), encontramos a quantidade de milho (Y) na ração:
-\[Y = 100 — 16,55 = 83,45\%\]
+Substituindo o valor de X na \seqref{eq:algebrico2}, encontramos a quantidade de milho (Y) na ração:
+\begin{equation}
+  \label{eq:algebrico8}
+  Y = 100 - 16,55 = 83,45\%
+\end{equation}
 
 Portanto, a ração será constituída de 16,55\% de farelo de algodão e 16,55\% de grão de milho.
 
 O Método do Quadrado de Pearson, é de natureza direta e permite a determinação das proporções de dois componentes em uma mistura, com o intuito de atingir um nível de nutriente específico, geralmente a proteína. Este método viabiliza o uso de dois alimentos ou conjuntos de alimentos que tenham sido previamente mesclados.
 
-Um exemplo prático que ilustra este método é o balanceamento de uma ração concentrada contendo 18\% de \gls{PB} e 80\% de \gls{NDT} utilizando o método do Quadrado de Pearson. Neste método, consideramos os teores de proteína dos ingredientes disponíveis, como o grão de milho moído e o farelo de soja, com teores de 9,82\% e 47,64\% de \gls{PB}, respectivamente.
+Um exemplo prático que ilustra este método é o balanceamento de uma ração concentrada contendo 18\% de \gls{PB} e 80\% de \gls{NDT} utilizando o método do Quadrado de Pearson. Neste método, consideramos os teores de proteína dos ingredientes disponíveis, como o grão de milho moído e o farelo de soja, com teores de 9,82\% e 47,64\% de \gls{PB}, respectivamente, valores baseados em \citeonline{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}.
 
-O processo inicia-se pela construção de um esquema quadrado, onde o valor do teor de \gls{PB} da mistura é colocado no centro do quadrado. À esquerda, são inseridos os teores de \gls{PB} dos dois ingredientes da mistura, enquanto à direita são registradas as diferenças numéricas entre os valores dos ingredientes e o teor de \gls{PB} da mistura ($18 - 9,82 = 8,18$ e $47,64 - 18 = 29,64$).
+O processo inicia-se pela construção de um esquema quadrado, onde o valor do teor de \gls{PB} da mistura é colocado no centro do quadrado. À esquerda, são inseridos os teores de \gls{PB} dos dois ingredientes da mistura, enquanto à direita são registradas as diferenças numéricas entre os valores dos ingredientes e o teor de \gls{PB} da mistura, sendo: 
+\begin{equation}
+  \label{eq:pearson1}
+  18 - 9,82 = 8,18
+\end{equation}
 
-Dessa forma, para 37,82 kg da mistura, será necessário utilizar 29,64 kg de milho e 8,18 kg de farelo de soja. Portanto, para 100 kg da mistura, serão necessários 78,37 kg de milho $(29,64 / 37,82)*100$ e 8,18 kg de farelo de soja $(8,18/37,82)*100$.
+\begin{equation}
+  \label{eq:pearson2}
+  47,64 - 18 = 29,64
+\end{equation}
+
+Dessa forma, para 37,82 kg da mistura, será necessário utilizar 29,64 kg de milho e 8,18 kg de farelo de soja. Portanto, para 100 kg da mistura, serão necessários 78,37 kg de milho:
+\begin{equation}
+ \label{eq:pearson3}
+ (29,64 / 37,82)*100 
+\end{equation}
+
+E 8,18 kg de farelo de soja:
+\begin{equation}
+ \label{eq:pearson4}
+ (8,18 / 37,82)*100
+\end{equation}
 
 Diante da extensiva quantidade de dados que necessita ser processada para alcançar um resultado, ressalta-se a crucial relevância de um sistema de informação que seja capaz de armazenar e analisar os registros, proporcionando eficiência e celeridade no desempenho das tarefas.
 
