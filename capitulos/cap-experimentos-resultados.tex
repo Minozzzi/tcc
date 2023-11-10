@@ -20,7 +20,7 @@ Na seção voltada aos animais, serão registradas informações abrangentes, ta
 
 No módulo relacionado às plantações, haverá um controle rigoroso sobre informações envolvendo pragas e doenças, abrangendo a identificação da cultura afetada, o tipo de praga ou doença identificada e o grau de infestação presente.
 
-No que concerne ao módulo financeiro, serão meticulosamente gerenciados registros de receitas e despesas. Tais registros incluirão datas, tipos, quantidades, valores expressos em reais e descrições detalhadas, com a possibilidade de realizar agrupamentos para uma análise mais precisa.
+No que concerne ao módulo financeiro, serão mantido os registros de receitas e despesas. Tais registros incluirão datas, tipos, quantidades, valores expressos em reais e descrições detalhadas, com a possibilidade de realizar agrupamentos para uma análise mais precisa.
 
 No módulo de produtos e insumos, os usuários terão a capacidade de controlar detalhes referentes aos produtos utilizados, quantidade empregada, data de aplicação e o propósito da utilização específica.
 
@@ -72,6 +72,8 @@ No \autoref{quad:requisitoCadastroUsuario} é apresentado o requisito funcional 
   \fonte{} % Fonte
 \end{tabframed}
 
+\clearpage
+
 No \autoref{quad:requisitoNiveisAcesso}, apresenta-se o requisito funcional de Níveis de Acesso, um componente essencial para a estrutura de autorização e controle de acesso do sistema. Esse requisito é fundamental para garantir que os usuários tenham acesso apenas às informações pertinentes às suas funções e responsabilidades no sistema. Os diferentes níveis de acesso são definidos com base nas permissões específicas de cada tipo de usuário.
 
 \begin{tabframed}[htb]
@@ -114,6 +116,8 @@ No \autoref{quad:requisitoNiveisAcesso}, apresenta-se o requisito funcional de N
   \fonte{} % Fonte
 \end{tabframed}
 
+\clearpage
+
 No \autoref{quad:requisitoAutenticacaoUsuario} é exibido o requisito funcional de Autenticação do Usuário, um requisito necessário para acessar os demais módulos do sistema. Nos requisitos não funcionais associados a este requisito, são detalhados os dados utilizados no processo de autenticação (\textit{login}).
 
 \begin{tabframed}[htb]
@@ -138,15 +142,17 @@ No \autoref{quad:requisitoAutenticacaoUsuario} é exibido o requisito funcional 
     \\ \cline{1-2}
 
     NF 3.1 Segurança na Autenticação &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir que o processo de autenticação seja seguro, protegendo as informações de login e senha contra acessos não autorizados.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve garantir que o processo de autenticação seja seguro, protegendo as informações de login e senha contra acessos não autorizados.}
     \\ \cline{1-2}
 
     NF 3.2 Usuários Autorizados      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright A autenticação deve permitir o acesso apenas a usuários devidamente autorizados e cadastrados, verificando as credenciais de login.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright A autenticação deve permitir o acesso apenas a usuários devidamente autorizados e cadastrados, verificando as credenciais de login.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
+
+\clearpage
 
 No \autoref{quad:requisitoManterPropriedades} é apresentado o requisito funcional denominado "Manter Propriedades". Este requisito é essencial para o funcionamento adequado dos demais módulos do sistema, uma vez que serve como o cadastro fundamental para as operações subsequentes. Nos requisitos não funcionais associados a este requisito, são estabelecidas diretrizes e restrições adicionais que impactam a forma como as propriedades são mantidas no sistema, garantindo a eficiência, segurança e controle necessários.
 
@@ -172,41 +178,43 @@ No \autoref{quad:requisitoManterPropriedades} é apresentado o requisito funcion
     \\ \cline{1-2}
 
     NF 4.1 Segurança de Acesso            &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível.}
     \\ \cline{1-2}
 
     NF 4.2 Auditoria de Acesso            &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
     \\ \cline{1-2}
 
     NF 4.3 Desempenho Eficiente           &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
     \\ \cline{1-2}
 
     NF 4.4 Correlacionamento com Produtor &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve disponibilizar formas de correlacioanr o produtor dono da propriedade e os demais colaboradores.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve disponibilizar formas de correlacioanr o produtor dono da propriedade e os demais colaboradores.}
     \\ \cline{1-2}
 
     NF 4.5 Correlacionamento com Técnico  &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve disponibilizar formas de correlacioanr o técnico responsável pela propriedade. Sendo, no mínimo, dois técnicos por propriedade.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve disponibilizar formas de correlacioanr o técnico responsável pela propriedade. Sendo, no mínimo, dois técnicos por propriedade.}
     \\ \cline{1-2}
 
     NF 4.6 Inventário de Recursos         &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve disponibilizar formas de inventariar os recursos da propriedade.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve disponibilizar formas de inventariar os recursos da propriedade.}
     \\ \cline{1-2}
 
     NF 4.7 Relatórios                     &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Os técnicos vinculados a propriedade poderão gerar relatórios da propriedade em questão.}
+    \multicolumn{1}{|p{9cm}|}{\raggedright Os técnicos vinculados a propriedade poderão gerar relatórios da propriedade em questão.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
 
-O requisito funcional descrito no \autoref{quad:requisitoManterAnimais}  aborda o cadastro de animais em uma propriedade específica, detalhando os campos associados a esses registros, bem como as outras funcionalidades e módulos do sistema que podem ser acessados a partir do cadastro de um animal em particular. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
+\clearpage
 
-\begin{tabframed}[htb]
-  \caption{Manter Animais}
-  \label{quad:requisitoManterAnimais}
+O requisito funcional descrito no \autoref{quad:requisitoManterAnimaisParte1} e \autoref{quad:requisitoManterAnimaisParte2} abordam o cadastro de animais em uma propriedade específica, detalhando os campos associados a esses registros, bem como as outras funcionalidades e módulos do sistema que podem ser acessados a partir do cadastro de um animal em particular. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
+
+\begin{tabframed}[!htb]
+  \caption{Manter Animais - parte 1}
+  \label{quad:requisitoManterAnimaisParte1}
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
@@ -222,64 +230,89 @@ O requisito funcional descrito no \autoref{quad:requisitoManterAnimais}  aborda 
     \multicolumn{2}{|l|}{\textbf{Requisitos Não Funcionais}}
     \\ \cline{1-2}
 
-    \textbf{Nome}                             &
+    \textbf{Nome} &
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 5.1 Segurança de Acesso                &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.1 Segurança de Acesso}
+                  &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
     \\ \cline{1-2}
 
-    NF 5.2 Auditoria de Acesso                &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.2 Auditoria de Acesso}
+                  &
+    \multicolumn{1}{|p{12cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
     \\ \cline{1-2}
 
-    NF 5.3 Desempenho Eficiente               &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
+    \multicolumn{1}{|p{3.2cm}|}{\raggedright NF 5.3 Desempenho Eficiente}
+                  &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
     \\ \cline{1-2}
 
-    NF 5.4 Controle aos módulos de manutenção &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve impedir o registro de manutenções em um animal quando uma data de morte ou venda já estiver registrada para o mesmo animal..}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.4 Controle aos módulos de manutenção}
+                  &
+
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve impedir o registro de manutenções em um animal quando uma data de morte ou venda já estiver registrada para o mesmo animal..}
     \\ \cline{1-2}
 
-    NF 5.5 Controle de partos                 &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve gerenciar o histórico de partos realizados nos animais, permitindo o registro de novos partos. Isso envolve a possibilidade de vincular o animal nascido, incluir a data do parto, o sexo do animal, o peso do animal ao nascer, condição do nascimento (vivo ou morto) e a raça do animal.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.5 Controle de partos}
+                  &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve gerenciar o histórico de partos realizados nos animais, permitindo o registro de novos partos. Isso envolve a possibilidade de vincular o animal nascido, incluir a data do parto, o sexo do animal, o peso do animal ao nascer, condição do nascimento (vivo ou morto) e a raça do animal.}
     \\ \cline{1-2}
 
-    NF 5.6 Controle de inseminações           &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve gerenciar o histórico de inseminações realizadas nos animais, permitindo o registro de novas inseminações. Isso envolve a possibilidade de incluir informações como a identificação do touro e a data da inseminação.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.6 Controle de inseminações}
+                  &
+
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve gerenciar o histórico de inseminações realizadas nos animais, permitindo o registro de novas inseminações. Isso envolve a possibilidade de incluir informações como a identificação do touro e a data da inseminação.}
     \\ \cline{1-2}
 
-    NF 5.7 Controle de mastite                &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de diagnósticos de mastites em animais, proporcionando a capacidade de adicionar novos diagnósticos. Para cada diagnóstico, o sistema deve permitir a inclusão da data, o tipo de mastite identificada e o resultado do teste CMT.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.7 Controle de mastite}
+                  &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de diagnósticos de mastites em animais, proporcionando a capacidade de adicionar novos diagnósticos. Para cada diagnóstico, o sistema deve permitir a inclusão da data, o tipo de mastite identificada e o resultado do teste CMT.}
+    \\ \cline{1-2}
+  \end{tabular}
+  \fonte{}
+\end{tabframed}
+
+\begin{tabframed}[!htb]
+  \caption{Manter Animais - parte 2}
+  \label{quad:requisitoManterAnimaisParte2}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|l|l|}
+    \cline{1-2}
+
+    \textbf{Nome}                                                           &
+    \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 5.8 Controle de doenças                &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de diagnósticos de doenças em animais, proporcionando a capacidade de adicionar novos diagnósticos. Para cada diagnóstico, o sistema deve permitir a descrição do diagnóstico feito e a data do diagnóstico.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.8 Controle de doenças}      &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de diagnósticos de doenças em animais, proporcionando a capacidade de adicionar novos diagnósticos. Para cada diagnóstico, o sistema deve permitir a descrição do diagnóstico feito e a data do diagnóstico.}
     \\ \cline{1-2}
 
-    NF 5.9 Controle de medicamentos           &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de medicamentos aplicados em animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir vincular um medicamento previamente cadastrado a ser utilizado na aplicação, a forma da aplicação a dose e o princípio ativo.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.9 Controle de medicamentos} &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de medicamentos aplicados em animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir vincular um medicamento previamente cadastrado a ser utilizado na aplicação, a forma da aplicação a dose e o princípio ativo.}
     \\ \cline{1-2}
 
-    NF 5.10 Controle de prenhez               &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de prenhez dos animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de diagnóstico e atualizar a data do último diagnóstico.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.10 Controle de prenhez}     &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de prenhez dos animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de diagnóstico e atualizar a data do último diagnóstico.}
     \\ \cline{1-2}
 
-    NF 5.11 Controle de vendas                &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de vendas de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de venda, motivo da venda, peso do animal na venda, valor recebido e o destino do animal.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.11 Controle de vendas }     &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de vendas de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de venda, motivo da venda, peso do animal na venda, valor recebido e o destino do animal.}
     \\ \cline{1-2}
 
-    NF 5.12 Controle de compras               &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de compras de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de compra, data de nascimento, peso do animal na compra, valor pago.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.12 Controle de compras}     &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de compras de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de compra, data de nascimento, peso do animal na compra, valor pago.}
     \\ \cline{1-2}
 
-    NF 5.13 Controle de óbitos                &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter um histórico de óbitos de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de óbito e o motivo do óbito.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.13 Controle de óbitos}      &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de óbitos de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de óbito e o motivo do óbito.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
+
+\clearpage
 
 O requisito funcional delineado no \autoref{quad:requisitoControlePragasVegetais} trata do controle de pragas em vegetais de uma propriedade específica. Ele fornece detalhes sobre os campos associados a esses registros, bem como as demais funcionalidades e módulos do sistema que podem ser acessados a partir do cadastro de um vegetal específico. Além disso, são especificados os requisitos de segurança e validações necessários para utilizar esse recurso.
 
@@ -319,6 +352,8 @@ O requisito funcional delineado no \autoref{quad:requisitoControlePragasVegetais
   \fonte{} % Fonte
 \end{tabframed}
 
+\clearpage
+
 O requisito funcional delineado no \autoref{quad:requisitoControleDoençasVegetais} trata do controle de doenças em vegetais de uma propriedade específica. Ele fornece detalhes sobre os campos associados a esses registros, bem como as demais funcionalidades e módulos do sistema que podem ser acessados a partir do cadastro de um vegetal específico. Além disso, são especificados os requisitos de segurança e validações necessários para utilizar esse recurso.
 
 \begin{tabframed}[htb]
@@ -356,6 +391,8 @@ O requisito funcional delineado no \autoref{quad:requisitoControleDoençasVegeta
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
+
+\clearpage
 
 O requisito funcional descrito no \autoref{quad:requisitoControleFinanceiro}  aborda o cadastro de receitas e despesas financeiras em uma propriedade específica, detalhando os campos associados a esses registros. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
 
@@ -415,6 +452,8 @@ O requisito funcional descrito no \autoref{quad:requisitoControleFinanceiro}  ab
   \fonte{} % Fonte
 \end{tabframed}
 
+\clearpage
+
 O requisito funcional descrito no \autoref{quad:requisitoControleInsumos}  aborda o cadastro da utilização de insumos em uma propriedade específica, detalhando os campos associados a esses registros, bem como as outras funcionalidades. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
 
 \begin{tabframed}[htb]
@@ -463,11 +502,13 @@ O requisito funcional descrito no \autoref{quad:requisitoControleInsumos}  abord
   \fonte{} % Fonte
 \end{tabframed}
 
-O requisito funcional descrito no \autoref{quad:requisitoVisitaRegular}  aborda uma sequência de cadastros relacionados a visita do técnico em uma propriedade específica, detalhando os campos associados a esses registros, bem como as outras funcionalidades e módulos do sistema que podem ser acessados a partir da realização de uma visita. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
+\clearpage
+
+O requisito funcional descrito no \autoref{quad:requisitoVisitaRegularParte1} e \autoref{quad:requisitoVisitaRegularParte2} abordam uma sequência de cadastros relacionados a visita do técnico em uma propriedade específica, detalhando os campos associados a esses registros, bem como as outras funcionalidades e módulos do sistema que podem ser acessados a partir da realização de uma visita. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
 
 \begin{tabframed}[htb]
-  \caption{Visita Regular}
-  \label{quad:requisitoVisitaRegular}
+  \caption{Visita Regular - parte 1}
+  \label{quad:requisitoVisitaRegularParte1}
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
@@ -483,48 +524,64 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegular}  aborda 
     \multicolumn{2}{|l|}{\textbf{Requisitos Não Funcionais}}
     \\ \cline{1-2}
 
-    \textbf{Nome}                             &
+    \textbf{Nome}                                                                 &
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 10.1 Segurança de Acesso               &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.1 Segurança de Acesso}           &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
     \\ \cline{1-2}
 
-    NF 10.2 Auditoria de Acesso               &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.2 Auditoria de Acesso}           &
+    \multicolumn{1}{|p{12cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
     \\ \cline{1-2}
 
-    NF 10.3 Desempenho Eficiente              &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.3 Desempenho Eficiente}          &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter tempos de resposta rápidos, independentemente do nível de acesso, garantindo eficiência na gestão e recuperação de dados.}
     \\ \cline{1-2}
 
-    NF 10.4 Disponibildiade de forragem       &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir o cadastro de disponibildiade de forragem, para um novo registro os campos como data, forregeira, entrada em centímetros, resíduo em centímetros, quilogramas por metro quadrado, área piquete em metros quadrados, eficiência em porcentagem, número de vacas e o quilograma de MN/Vaca devem ser preenchidos.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.4 Disponibildiade de forragem}   &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de disponibildiade de forragem, para um novo registro os campos como data, forregeira, entrada em centímetros, resíduo em centímetros, quilogramas por metro quadrado, área piquete em metros quadrados, eficiência em porcentagem, número de vacas e o quilograma de MN/Vaca devem ser preenchidos.}
     \\ \cline{1-2}
 
-    NF 10.5  Dados de bezzeras e novilhas     &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir o cadastro de bezerras e novilhas, para um novo registro os campos como identificação do animal, tipo de raça, data de nascimento, peso ao nascer, peso atual e \gls{ECC} devem ser preenchidos. Caso seja um animal existente as informações serão recuperadas através da identificação do animal e preenchidas nos campos, sem haver necessidade de preenchimento manual, exceto os campos de \gls{ECC} e pesagem atual. O sistema deve impedir o relacionamento de vacas com relação de parto, venda ou óbito. Ao final do prenchimento dos dados do animal, o sistema deve gerar resultados referente ao mesmo.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.5  Dados de bezerras e novilhas} &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de bezerras e novilhas, para um novo registro os campos como identificação do animal, tipo de raça, data de nascimento, peso ao nascer, peso atual e \gls{ECC} devem ser preenchidos. Caso seja um animal existente as informações serão recuperadas através da identificação do animal e preenchidas nos campos, sem haver necessidade de preenchimento manual, exceto os campos de \gls{ECC} e pesagem atual. O sistema deve impedir o relacionamento de vacas com relação de parto, venda ou óbito. Ao final do prenchimento dos dados do animal, o sistema deve gerar resultados referente ao mesmo.}
+    \\ \cline{1-2}
+  \end{tabular}
+  \fonte{}
+\end{tabframed}
+
+\begin{tabframed}[!htb]
+  \caption{Visita Regular - parte 2}
+  \label{quad:requisitoVisitaRegularParte2}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|l|l|}
+    \cline{1-2}
+
+    \textbf{Nome}                                                                       &
+    \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 10.6 Formulação de ração para bezerras &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Se houver animais em aleitamento, o sistema deve permitir o registro de formulação de ração para as bezerras.}
+    \multicolumn{1}{|p{3.2cm}|}{\raggedright NF 10.6 Formulação de ração para bezerras} &
+    \multicolumn{1}{|p{12cm}|}{\raggedright Se houver animais em aleitamento, o sistema deve permitir o registro de formulação de ração para as bezerras.}
     \\ \cline{1-2}
 
-    NF 10.7 Formulação de ração para novilhas &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Se houver animais jovens, que estejam na fase entre a desmama e o pré parto das primíapras, o sistema deve permitir o registro de formulação de ração para as novilhas.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.7 Formulação de ração para novilhas}   &
+    \multicolumn{1}{|p{12cm}|}{\raggedright Se houver animais jovens, que estejam na fase entre a desmama e o pré parto das primíapras, o sistema deve permitir o registro de formulação de ração para as novilhas.}
     \\ \cline{1-2}
 
-    NF 10.8 Dados de vacas e balancemaneto    &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir o cadastro de vacas na visita, caso o animal buscado já esteja inserido na propriedade o técnico apenas terá que atualizar campos como \gls{ECC}, peso vivo, produção de leite, teor de gorudra, teor de protiína, contagem de céluas osmáticas, contagem padrão em palca e nitrogênio ureico no leite.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.8 Dados de vacas e balancemaneto}      &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de vacas na visita, caso o animal buscado já esteja inserido na propriedade o técnico apenas terá que atualizar campos como \gls{ECC}, peso vivo, produção de leite, teor de gorudra, teor de protiína, contagem de céluas osmáticas, contagem padrão em palca e nitrogênio ureico no leite.}
     \\ \cline{1-2}
 
-    NF 10.9 Formulação de ração para vacas    &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve permitir a formulação de ração para vacas após preenchimento dos dados das vacas, onde o técnico irá inserir os alimentos de acordo com a disponibilidade.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.9 Formulação de ração para vacas}      &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir a formulação de ração para vacas após preenchimento dos dados das vacas, onde o técnico irá inserir os alimentos de acordo com a disponibilidade.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
+
+\clearpage
 
 No \autoref{quad:requisitoCadastroProdutor} é apresentado o requisito funcional de Cadastro de Produtor, que é fundamental para as propriedades. Os requisitos não funcionais relacionados a este requisito descrevem os dados necessários para efetuar o registro do produtor, incluindo informações relevantes ao processo de criação da conta.
 
@@ -563,6 +620,8 @@ No \autoref{quad:requisitoCadastroProdutor} é apresentado o requisito funcional
   \end{tabular}
   \fonte{} % Fonte
 \end{tabframed}
+
+\clearpage
 
 \subsection{Casos de uso}\label{subsec:casosDeUso}
 No \autoref{quad:casosDeUso} são listados os casos de uso, os atores e os requisitos funcionais que estã associados em cada um dos casos.
@@ -650,6 +709,8 @@ A \autoref{fig:casosDeUso} apresenta o diagrama dos casos de uso do sistema, exi
   \fonte{}
 \end{figure}
 
+\clearpage
+
 \subsection{Diagrama de Entidade e Relacionamento}\label{subsec:diagramaEntidadeRelacionamento}
 
 A \autoref{fig:idr-er-diagram-green}, \autoref{fig:idr-er-diagram-yellow} e \autoref{fig:idr-er-diagram-grey} apresentam o diagrama de entidade e relacionamento do sistema, exibindo as entidades e os relacionamentos entre elas. Sendo as principais entidades do diagrama apresentado:
@@ -662,7 +723,7 @@ A \autoref{fig:idr-er-diagram-green}, \autoref{fig:idr-er-diagram-yellow} e \aut
 
 \begin{figure}[htpb]
   \captionsetup{width=0.6\textwidth}
-  \caption{Diagrama Entidade Relacionamento - Parte 1}
+  \caption{Diagrama Entidade Relacionamento - parte 1}
   \label{fig:idr-er-diagram-green}
   \includegraphics[scale=0.135]{idr-er-diagram-green}
   \fonte{}
@@ -670,7 +731,7 @@ A \autoref{fig:idr-er-diagram-green}, \autoref{fig:idr-er-diagram-yellow} e \aut
 
 \begin{figure}[htpb]
   \captionsetup{width=0.6\textwidth}
-  \caption{Diagrama Entidade Relacionamento - Parte 2}
+  \caption{Diagrama Entidade Relacionamento - parte 2}
   \label{fig:idr-er-diagram-yellow}
   \includegraphics[scale=0.160]{idr-er-diagram-yellow}
   \fonte{}
@@ -678,7 +739,7 @@ A \autoref{fig:idr-er-diagram-green}, \autoref{fig:idr-er-diagram-yellow} e \aut
 
 \begin{figure}[htpb]
   \captionsetup{width=0.6\textwidth}
-  \caption{Diagrama Entidade Relacionamento - Parte 3}
+  \caption{Diagrama Entidade Relacionamento - parte 3}
   \label{fig:idr-er-diagram-grey}
   \includegraphics[scale=0.140]{idr-er-diagram-grey}
   \fonte{}
