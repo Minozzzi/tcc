@@ -136,6 +136,7 @@
 \RequirePackage{lastpage}%% Referência da última página
 \RequirePackage{algorithmic}%% Ferramenta para tipografar um algoritmo em pseudocódigo
 \RequirePackage[acronym, nosuper, nowarn, sanitize={description=false}, style=index]{glossaries}%% Glossários e listas de acrônimos
+\RequirePackage{glossary-long}%% Estilos de glossário baseados em tabelas longas
 \RequirePackage{nomencl}%% Listas de símbolos como uma nomenclatura
 \RequirePackage{amsmath}%% Ferramentas para linguagem matemática
 \RequirePackage{sistyle}%% Unidades, números e ângulos no SI
@@ -1211,26 +1212,33 @@
 \newcommand{\abbreviationtype}{abreviatura}%% Tipo de acrônimo (abreviatura)
 \newglossary[alg2]{\pseudoacronymtype}{acr2}{acn2}{\nomesiglas}%% Subtipo de glossário (siglas)
 \newglossary[alg3]{\abbreviationtype}{acr3}{acn3}{\nomeabreviaturas}%% Subtipo de glossário (abreviaturas)
-\newcommand{\imprimirlistadeacronimos}{%% Definição do comando para inclusão da lista de abreviaturas, siglas e acrônimos
-  \newglossarystyle{myxtab}{%% Estilo de glossário personalizado
-    \glossarystyle{long}%% Estilo de glossário base
-    \renewcommand*{\glossaryheader}{}%% Conteúdo do cabeçalho do glossário
-    \renewcommand*{\glsgroupheading}[1]{}%% Conteúdo do cabeçalho de itens no glossário
-    \renewcommand*{\glsgroupskip}{}%% Espaçamento entre itens
-    \renewcommand*{\glspostdescription}{}%% Remoção do ponto no final das descrições do glossário
-    \renewcommand*{\glossarypreamble}{\vspace*{0pt}}%% Definição de comandos antes do glossário
-    \renewcommand*{\glossarypostamble}{\vspace*{0pt}}%% Definição de comandos após o glossário
-    \setglossarysection{section}%% Estilo de seção do glossário
-    \setlength{\glsdescwidth}{135mm}%% Comprimento da descrição
-    \setlength{\glspagelistwidth}{0pt}%% Comprimento da lista de páginas
-    \renewenvironment{theglossary}{%% Formatação do glossário
-      \begin{Spacing}{1.5}%% Espaçamento simples entre linhas
-        \begin{xtabular}{@{}p{25mm}@{}p{\glsdescwidth}}%% Ambiente xtabular
-    }{%%
-        \end{xtabular}
-      \end{Spacing}
-    }
+\newglossarystyle{myxtab}{%% Estilo de glossário personalizado
+  \setglossarystyle{long}%% Estilo de glossário base
+  \renewcommand*{\glossentry}[2]{%
+    \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} & 
+    \glossentrydesc{##1}\glspostdescription\space ##2\tabularnewline
   }
+  \renewcommand*{\subglossentry}[3]{%
+     & \glssubentryitem{##2}\glstarget{##2}{\glossentryname{##2}} \glossentrydesc{##2}\glspostdescription\space ##3\tabularnewline
+  }
+  \renewcommand*{\glossaryheader}{}%% Conteúdo do cabeçalho do glossário
+  \renewcommand*{\glsgroupheading}[1]{}%% Conteúdo do cabeçalho de itens no glossário
+  \renewcommand*{\glsgroupskip}{}%% Espaçamento entre itens
+  \renewcommand*{\glspostdescription}{}%% Remoção do ponto no final das descrições do glossário
+  \renewcommand*{\glossarypreamble}{\vspace*{0pt}}%% Definição de comandos antes do glossário
+  \renewcommand*{\glossarypostamble}{\vspace*{0pt}}%% Definição de comandos após o glossário
+  \setglossarysection{section}%% Estilo de seção do glossário
+  \setlength{\glsdescwidth}{135mm}%% Comprimento da descrição
+  \setlength{\glspagelistwidth}{0pt}%% Comprimento da lista de páginas
+  \renewenvironment{theglossary}{%% Formatação do glossário
+    \begin{Spacing}{1.5}%% Espaçamento simples entre linhas
+      \begin{longtable}{@{}p{25mm}@{}p{\glsdescwidth}}%% Ambiente longtable
+  }{%%
+      \end{longtable}
+    \end{Spacing}
+  }
+}
+\newcommand{\imprimirlistadeacronimos}{%% Definição do comando para inclusão da lista de abreviaturas, siglas e acrônimos
   \pretextualchapter{\nomelistadeacronimos}%% Marcador
   \printglossary[type = \abbreviationtype, title = \nomeabreviaturas, style = myxtab, nonumberlist = true]%% Lista de abreviaturas
   \printglossary[type = \pseudoacronymtype, title = \nomesiglas, style = myxtab, nonumberlist = true]%% Lista de siglas
@@ -1368,11 +1376,11 @@
 %% luiz : TODO - fazer só a primeira letra maiúscula e o resto minusculo automático - tentei mas perdeu a formatação, sugestão: https://tex.stackexchange.com/questions/380500/first-letter-upper-case-and-other-letters-in-lower-case
 
 
-\let\oldcontentsline\contentsline%% Título da seção no sumário em letras maíusculas
-\def\contentsline#1#2{%%
-  \expandafter\ifx\csname l@#1\endcsname\l@section\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%%
-  {\oldcontentsline{#1}{#2}}{\oldcontentsline{#1}{#2}}%%
-} % ver o caixa alta no sumário e no texto... 
+% \let\oldcontentsline\contentsline%% Título da seção no sumário em letras maíusculas
+% \def\contentsline#1#2{%%
+%   \expandafter\ifx\csname l@#1\endcsname\l@section\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%%
+%   {\oldcontentsline{#1}{#2}}{\oldcontentsline{#1}{#2}}%%
+% } % ver o caixa alta no sumário e no texto... 
 
 % fim
 
@@ -1609,7 +1617,7 @@
 
  \renewcommand*{\l@section}[2]
  {% luiz - o xmakefirstuc está funcionando, todavia a primeira coisa que vem é o número... e depois o texto, então ele não deixa a primeira letra maiúscula por causa disso... tem que ver como resolver
-     \l@chapapp{\ABNTEXsectionfont\xmakefirstuc{#1}}{#2}{\cftsectionname}
+     \l@chapapp{\ABNTEXsectionfont #1}{#2}{\cftsectionname}
  }
  
  
