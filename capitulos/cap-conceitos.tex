@@ -25,10 +25,10 @@ Apesar do modelo \gls{CNCPS} ser norte americano, empregando informações de re
 
 De acordo com \citeonline{Arrigoni:2023:NiveisElevadosConcentrado} a natureza dos alimentos, seja ela caracterizada como volumosa ou concentrada, e os níveis de nutrientes contidos nesses alimentos desempenham um papel crucial na influência do comportamento alimentar dos animais. Esses fatores exercem um impacto significativo no desempenho e na produtividade dos animais.
 
-No processo de balanceamento nutricional para animais, conforme estabelecido por \citeonline{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}, diversas etapas precisam ser cuidadosamente seguidas para assegurar a eficácia e a saúde do rebanho. Estas diretrizes fornecem um arcabouço fundamental para garantir que as necessidades nutricionais dos animais sejam atendidas de forma precisa e sustentável, sendo um elemento essencial na promoção do bem-estar e na maximização da produtividade. A seguir, serão apresentadas as principais etapas desse processo, proporcionando uma visão geral das práticas que sustentam a nutrição adequada para animais de produção \cite{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}.
+No processo de balanceamento nutricional para animais, conforme estabelecido por \citeonline{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}, diversas etapas precisam ser cuidadosamente seguidas para assegurar a eficácia e a saúde do rebanho. Estas diretrizes fornecem um arcabouço fundamental para garantir que as necessidades nutricionais dos animais sejam atendidas de forma precisa e sustentável, sendo um elemento essencial na promoção do bem-estar e na maximização da produtividade. A seguir, apresentam-se as principais etapas desse processo, proporcionando uma visão geral das práticas que sustentam a nutrição adequada para animais de produção \cite{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}.
 
 \begin{enumerate}
-  \item Inicialmente, é essencial realizar a identificação dos animais que serão alvo do balanceamento da ração.
+  \item Inicialmente, é essencial realizar a identificação dos animais que são alvo do balanceamento da ração.
 
   \item Em seguida, é necessário estabelecer as necessidades nutricionais desses animais com base nas características previamente identificadas.
 
@@ -92,7 +92,7 @@ Substituindo o valor de X na \seqref{eq:algebrico2}, encontramos a quantidade de
   Y = 100 - 16,55 = 83,45\%
 \end{equation}
 
-Portanto, a ração será constituída de 16,55\% de farelo de algodão e 16,55\% de grão de milho.
+Portanto, a ração é constituída de 16,55\% de farelo de algodão e 83,45\% de grão de milho.
 
 O Método do Quadrado de Pearson, é de natureza direta e permite a determinação das proporções de dois componentes em uma mistura, com o intuito de atingir um nível de nutriente específico, geralmente a proteína. Este método viabiliza o uso de dois alimentos ou conjuntos de alimentos que tenham sido previamente mesclados.
 
@@ -109,7 +109,7 @@ O processo inicia-se pela construção de um esquema quadrado, onde o valor do t
   47,64 - 18 = 29,64
 \end{equation}
 
-Dessa forma, para 37,82 kg da mistura, será necessário utilizar 29,64 kg de milho e 8,18 kg de farelo de soja. Portanto, para 100 kg da mistura, serão necessários 78,37 kg de milho:
+Dessa forma, para 37,82 kg da mistura, é necessário utilizar 29,64 kg de milho e 8,18 kg de farelo de soja. Portanto, para 100 kg da mistura, são necessários 78,37 kg de milho:
 \begin{equation}
  \label{eq:pearson3}
  (29,64 / 37,82)*100 
@@ -122,4 +122,27 @@ E 8,18 kg de farelo de soja:
 \end{equation}
 
 Diante da extensiva quantidade de dados que necessita ser processada para alcançar um resultado, ressalta-se a crucial relevância de um sistema de informação que seja capaz de armazenar e analisar os registros, proporcionando eficiência e celeridade no desempenho das tarefas.
+
+\section{Arquitetura de Software e Clean Architecture}\label{sec:arquiteturaSoftware}
+
+A arquitetura de software é a estrutura fundamental de um sistema, composta por seus componentes, propriedades externas e os relacionamentos entre eles. Segundo \citeonline{Martin:2017:CleanArchitecture}, uma boa arquitetura deve permitir que o sistema seja fácil de entender, desenvolver, manter e implantar. O objetivo principal é minimizar o custo humano por unidade de funcionalidade ao longo da vida útil do software.
+
+A \textit{Clean Architecture} (Arquitetura Limpa), proposta por Robert C. Martin, foca na separação de preocupações através do encapsulamento da lógica de negócio em camadas independentes de frameworks, interfaces de usuário ou bancos de dados. Esta abordagem garante que o núcleo do software permaneça testável e resiliente a mudanças tecnológicas externas.
+
+As camadas fundamentais geralmente incluem:
+\begin{itemize}
+    \item \textbf{Entidades (Domain):} Contêm as regras de negócio cruciais e objetos de domínio. São o ponto mais interno e estável da arquitetura.
+    \item \textbf{Casos de Uso (Data/Use Cases):} Orquestram o fluxo de dados de e para as entidades, implementando as regras de negócio específicas da aplicação.
+    \item \textbf{Adaptadores de Interface (Infra/Gateways):} Convertem dados no formato mais conveniente para os casos de uso e entidades (ex: conversores de \gls{API} \gls{REST}).
+    \item \textbf{Frameworks e Drivers (Presentation/UI):} Camada onde residem ferramentas como React e detalhes de interface.
+\end{itemize}
+
+Ao adotar esses princípios, o desenvolvimento do \textit{idr-web} busca garantir que a lógica de manejo e balanceamento nutricional esteja isolada das complexidades da interface visual, permitindo evoluções modulares e manutenção simplificada.
+
+\section{Gerenciamento de Estado e TanStack Query}\label{sec:gerenciamentoEstado}
+
+Em aplicações \textit{frontend} modernas, o gerenciamento de estado é o processo de controlar como os dados mudam ao longo do tempo e como essas mudanças são refletidas na \gls{UI}. O estado pode ser dividido em estado local (\gls{UI}) e estado do servidor (dados remotos).
+
+A biblioteca TanStack Query (anteriormente React Query) destaca-se por simplificar a sincronização entre o cliente e o servidor. Ela gerencia automaticamente tarefas complexas como \textit{caching}, invalidação de consultas, atualizações em segundo plano e estados de carregamento ou erro. Ao tratar o estado do servidor como algo distinto do estado da interface, a biblioteca reduz a necessidade de códigos redundantes e melhora a experiência do usuário através de respostas instantâneas e dados sempre atualizados \cite{Dorfmeister:2022:ReactQueryGuide}.
+
 

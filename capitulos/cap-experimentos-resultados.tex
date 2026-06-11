@@ -2,7 +2,7 @@
 
 \chapter{Resultados}\label{cap:resultados}
 
-Este capítulo descreve os resultados preliminares do trabalho, que é um cliente \textit{web}, com foco no controle de gestão de propriedades rurais, acompanhamento de animais nas propriedades rurais e gerenciamento financeiro da propriedade, entre outras funcionalidades.
+Este capítulo descreve os resultados do trabalho, que é um cliente \textit{web}, com foco no controle de gestão de propriedades rurais e acompanhamento de animais, entre outras funcionalidades.
 
 A seguir, apresenta-se o escopo do sistema, destacando as principais funcionalidades e os atores envolvidos. Posteriormente, descreve-se a modelagem do sistema, que compreende a definição dos requisitos funcionais e não funcionais, juntamente com a elaboração dos diagramas de casos de uso e do modelo de entidade e relacionamento do banco de dados.
 
@@ -10,26 +10,24 @@ A seguir, apresenta-se o escopo do sistema, destacando as principais funcionalid
 
 O cliente \textit{web} para gerenciamento de gado leiteiro destina-se, inicialmente, aos técnicos do \gls{IDR-PR}. Embora o foco atual seja o uso técnico, a arquitetura permite a futura expansão de acesso aos produtores rurais. A principal finalidade do sistema é o controle e manuseio das informações, a fim de evitar incoerência nos registros coletados. A plataforma \textit{web} atua como a interface de interação com o usuário, consumindo dados de uma \gls{API} \gls{REST} desenvolvida em paralelo a este trabalho.
 
-Cada técnico poderá realizar o gerenciamento da propriedade à qual está vinculado, bem como informações do rebanho, do financeiro, de insumos, produtos e de plantações.
+Cada técnico poderá realizar o gerenciamento da propriedade à qual está vinculado, bem como informações do rebanho, de insumos, produtos e de plantações.
 
-O sistema inicia-se com uma página de autenticação; caso o técnico ainda não possua cadastro, poderá realizá-lo. Ressalta-se que uma propriedade pode ser relacionada a um ou mais técnicos, sendo que estes só podem analisar dados das propriedades às quais estão vinculados. Estão incluídos no sistema, além de cadastro e autenticação, o módulo de propriedades do financeiro, de animais, produtos, insumos e de plantações. Com exceção do gerenciamento de propriedades, os demais módulos são sempre referentes a uma propriedade específica.
+O sistema inicia-se com uma página de autenticação; caso o técnico ainda não possua cadastro, poderá realizá-lo. Ressalta-se que uma propriedade pode ser relacionada a um ou mais técnicos, sendo que estes só podem analisar dados das propriedades às quais estão vinculados. Estão incluídos no sistema, além de cadastro e autenticação, o módulo de propriedades, de animais, produtos, insumos e de plantações. Com exceção do gerenciamento de propriedades, os demais módulos são sempre referentes a uma propriedade específica.
 
-No módulo dedicado às propriedades, serão cadastrados diversos dados importantes, incluindo informações sobre o produtor, colaboradores, a área destinada à bovinocultura (em hectares), coordenadas de localização e uma imagem representativa da propriedade.
+No módulo dedicado às propriedades, cadastram-se diversos dados importantes, incluindo informações sobre o produtor (armazenadas diretamente no registro da propriedade), colaboradores, a área destinada à bovinocultura (em hectares), coordenadas de localização e uma imagem representativa da propriedade.
 
-Na seção voltada aos animais, serão registradas informações abrangentes, tais como, dados sobre partos, inseminações, casos de mastite, doenças, medicamentos administrados, diagnósticos de prenhez, além de detalhes sobre vendas, compras e óbitos de animais.
+Na seção voltada aos animais, registram-se informações abrangentes, tais como, dados sobre partos, inseminações, casos de mastite, doenças, medicamentos administrados, diagnósticos de prenhez, além de detalhes sobre vendas, compras e óbitos de animais.
 
-No módulo relacionado às plantações, haverá um controle rigoroso sobre informações envolvendo pragas e doenças, abrangendo a identificação da cultura afetada, o tipo de praga ou doença identificada e o grau de infestação presente.
+No módulo relacionado às plantações, há um controle rigoroso sobre informações envolvendo pragas e doenças, abrangendo a identificação da cultura afetada, o tipo de praga ou doença identificada e o grau de infestação presente.
 
-No que concerne ao módulo financeiro, serão mantidos os registros de receitas e despesas. Tais registros incluirão datas, tipos, quantidades, valores expressos em reais e descrições detalhadas, com a possibilidade de realizar agrupamentos para uma análise mais precisa.
+No módulo de produtos e insumos, os usuários têm a capacidade de controlar detalhes referentes aos produtos utilizados, quantidade empregada, data de aplicação e o propósito da utilização específica.
 
-No módulo de produtos e insumos, os usuários terão a capacidade de controlar detalhes referentes aos produtos utilizados, quantidade empregada, data de aplicação e o propósito da utilização específica.
-
-Dessa maneira, todas as informações referentes à uma propriedade rural serão armazenadas e servirão como subsídio para que os técnicos possam auxiliar na melhora da produtividade dessas propriedades.
+Dessa maneira, todas as informações referentes à uma propriedade rural são armazenadas e servem como subsídio para que os técnicos possam auxiliar na melhora da produtividade dessas propriedades.
 
 \section{Modelagem do sistema}\label{sec:modelagemSistema}
 
-Nesta seção, são delineados os requisitos funcionais e não funcionais, os casos de uso e os diagramas que descrevem os processos e a estrutura do sistema a ser desenvolvido. Cada requisito funcional é introduzido, seguido dos requisitos não funcionais pertinentes.
-Os requisitos funcionais são detalhados entre o \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoCadastroProdutor}, enquanto os requisitos não funcionais são apresentados nos quadros correspondentes, do \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoCadastroProdutor}, respectivamente.
+Nesta seção, são delineados os requisitos funcionais e não funcionais, os casos de uso e os diagramas que descrevem os processos e a estrutura do sistema desenvolvido. Cada requisito funcional é introduzido, seguido dos requisitos não funcionais pertinentes.
+Os requisitos funcionais são detalhados entre o \autoref{quad:requisitoCadastroUsuario} até o \autoref{quad:requisitoVisitaRegularParte2}, enquanto os requisitos não funcionais são apresentados nos quadros correspondentes.
 
 \subsection{Requisitos funcionais e não funcionais}\label{subsec:requisitosFuncionaisNaoFuncionais}
 
@@ -56,60 +54,16 @@ No \autoref{quad:requisitoCadastroUsuario} é apresentado o requisito funcional 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 1.1 Segurança de Dados      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Os dados dos usuários, incluindo informações pessoais e aceitação dos Termos de Uso, devem ser armazenados de forma segura e protegidos contra acesso não autorizado.}
+    NF 1.1 Segurança no Manuseio de Dados &
+    \multicolumn{1}{|p{8cm}|}{\raggedright As informações sensíveis dos usuários, como credenciais e tokens de acesso, devem ser manipuladas seguindo boas práticas de segurança em aplicações \textit{Single Page Application} (SPA), garantindo o tráfego via \gls{HTTP} seguro.}
     \\ \cline{1-2}
 
-    NF 1.2 Validações ao cadastrar &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve validar os dados informados pelo usuário e não deve permitir cadastro em situações de email ou CPF já existente.}
+    NF 1.2 Validações de Interface &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve realizar a validação prévia dos dados informados (\textit{client-side}) via biblioteca Zod, fornecendo \textit{feedback} imediato. Em caso de restrições de unicidade (como CPF já existente), a interface deve tratar e exibir de forma amigável o erro retornado pela \gls{API}.}
     \\ \cline{1-2}
 
     NF 1.3 Usabilidade             &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O processo de cadastro deve ser intuitivo e fácil de ser realizado, com instruções claras para o usuário. O sistema deve fornecer feedback imediato em caso de erros ou campos obrigatórios não preenchidos.}
-    \\ \cline{1-2}
-  \end{tabular}
-  \fonte{} % Fonte
-\end{tabframed}
-
-\clearpage
-
-No \autoref{quad:requisitoNiveisAcesso}, apresenta-se o requisito funcional de Níveis de Acesso, um componente essencial para a estrutura de autorização e controle de acesso do sistema. Esse requisito é fundamental para garantir que os usuários tenham acesso apenas às informações pertinentes às suas funções e responsabilidades no sistema. Os diferentes níveis de acesso são definidos com base nas permissões específicas de cada tipo de usuário.
-
-\begin{tabframed}[htb]
-  \caption{Níveis de Acesso}
-  \label{quad:requisitoNiveisAcesso}
-  \renewcommand{\arraystretch}{1.5}
-  \begin{tabular}{|l|l|}
-    \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F2 - Níveis de Acesso}}
-    \\ \cline{1-2}
-
-    \multicolumn{2}{|p{15cm}|}{
-    \raggedright \textbf{Descrição:} O sistema deve estabelecer níveis de acesso, cada um com suas respectivas permissões para visualização e gerenciamento de dados.
-    }
-    \\ \cline{1-2}
-
-    \multicolumn{2}{|l|}{\textbf{Requisitos Não Funcionais}}
-    \\ \cline{1-2}
-
-    \textbf{Nome}                     &
-    \textbf{Restrição}
-    \\ \cline{1-2}
-
-    NF 2.1 Segurança de Acesso        &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível.}
-    \\ \cline{1-2}
-
-    NF 2.2 Auditoria de Acesso        &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
-    \\ \cline{1-2}
-
-    NF 2.3 Desempenho Eficiente       &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
-    \\ \cline{1-2}
-
-    NF 2.4 Customização de Permissões &
-    \multicolumn{1}{|p{8cm}|}{\raggedright A flexibilidade do sistema permite que administradores atribuam permissões personalizadas de acordo com as necessidades.}
+    \multicolumn{1}{|p{8cm}|}{\raggedright O processo de cadastro deve ser intuitivo e fácil de ser realizado, com instruções claras para o usuário. O sistema deve fornecer \textit{feedback} visual imediato em caso de erros ou campos obrigatórios não preenchidos.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
@@ -125,7 +79,7 @@ No \autoref{quad:requisitoAutenticacaoUsuario} é exibido o requisito funcional 
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F3 - Autenticação do Usuário}}
+    \multicolumn{2}{|l|}{\textbf{F2 - Autenticação do Usuário}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
@@ -140,12 +94,12 @@ No \autoref{quad:requisitoAutenticacaoUsuario} é exibido o requisito funcional 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 3.1 Segurança na Autenticação &
-    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve garantir que o processo de autenticação seja seguro, protegendo as informações de login e senha contra acessos não autorizados.}
+    NF 2.1 Gerenciamento de Sessão &
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve manter a sessão do usuário de forma segura no navegador, garantindo que o acesso aos módulos internos só ocorra após a validação bem-sucedida das credenciais junto à \gls{API}.}
     \\ \cline{1-2}
 
-    NF 3.2 Usuários Autorizados      &
-    \multicolumn{1}{|p{9cm}|}{\raggedright A autenticação deve permitir o acesso apenas a usuários devidamente autorizados e cadastrados, verificando as credenciais de login.}
+    NF 2.2 Persistência de Acesso      &
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve ser capaz de recuperar a sessão ativa do usuário após atualizações de página (\textit{refresh}), evitando a necessidade de múltiplos \textit{logins} durante o uso.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
@@ -161,7 +115,7 @@ No \autoref{quad:requisitoManterPropriedades} é apresentado o requisito funcion
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F4 - Manter Propriedades}}
+    \multicolumn{2}{|l|}{\textbf{F3 - Manter Propriedades}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
@@ -176,31 +130,27 @@ No \autoref{quad:requisitoManterPropriedades} é apresentado o requisito funcion
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 4.1 Segurança de Acesso            &
-    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível.}
+    NF 3.1 Restrição de Acesso            &
+    \multicolumn{1}{|p{9cm}|}{\raggedright A interface deve restringir a visualização e edição apenas às propriedades vinculadas ao perfil do usuário autenticado.}
     \\ \cline{1-2}
 
-    NF 4.2 Auditoria de Acesso            &
-    \multicolumn{1}{|p{9cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    NF 3.2 Desempenho Eficiente           &
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando TanStack Query para otimização de requisições e redução de latência.}
     \\ \cline{1-2}
 
-    NF 4.3 Desempenho Eficiente           &
-    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
+    NF 3.3 Informações do Produtor        &
+    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve permitir o registro do nome do produtor diretamente no cadastro da propriedade.}
     \\ \cline{1-2}
 
-    NF 4.4 Correlacionamento com Produtor &
-    \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve disponibilizar formas de correlacionar o produtor dono da propriedade e os demais colaboradores.}
-    \\ \cline{1-2}
-
-    NF 4.5 Correlacionamento com Técnico  &
+    NF 3.4 Correlacionamento com Técnico  &
     \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve disponibilizar formas de correlacionar o técnico responsável pela propriedade. Sendo, no mínimo, dois técnicos por propriedade.}
     \\ \cline{1-2}
 
-    NF 4.6 Inventário de Recursos         &
+    NF 3.5 Inventário de Recursos         &
     \multicolumn{1}{|p{9cm}|}{\raggedright O sistema deve disponibilizar formas de inventariar os recursos da propriedade.}
     \\ \cline{1-2}
 
-    NF 4.7 Relatórios                     &
+    NF 3.6 Relatórios                     &
     \multicolumn{1}{|p{9cm}|}{\raggedright Os técnicos vinculados à propriedade poderão gerar relatórios da propriedade em questão.}
     \\ \cline{1-2}
   \end{tabular}
@@ -217,7 +167,7 @@ O requisito funcional descrito no \autoref{quad:requisitoManterAnimaisParte1} e 
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F5 - Manter Animais}}
+    \multicolumn{2}{|l|}{\textbf{F4 - Manter Animais}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
@@ -233,39 +183,34 @@ O requisito funcional descrito no \autoref{quad:requisitoManterAnimaisParte1} e 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.1 Segurança de Acesso}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.1 Restrição de Contexto}
                   &
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir que o manuseio de animais seja restrito ao contexto da propriedade selecionada pelo usuário logado.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.2 Auditoria de Acesso}
+    \multicolumn{1}{|p{3.2cm}|}{\raggedright NF 4.2 Desempenho Eficiente}
                   &
-    \multicolumn{1}{|p{12cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando TanStack Query para otimização de requisições.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3.2cm}|}{\raggedright NF 5.3 Desempenho Eficiente}
-                  &
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
-    \\ \cline{1-2}
-
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.4 Controle aos módulos de manutenção}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.3 Controle de Estado}
                   &
 
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve impedir o registro de manutenções em um animal quando uma data de morte ou venda já estiver registrada para o mesmo animal..}
+    \multicolumn{1}{|p{12cm}|}{\raggedright A interface deve impedir o registro de novas manutenções (como vacinas ou partos) caso o animal possua um \textit{status} de óbito ou venda já registrado.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.5 Controle de partos}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.4 Controle de partos}
                   &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve gerenciar o histórico de partos realizados nos animais, permitindo o registro de novos partos. Isso envolve a possibilidade de vincular o animal nascido, incluir a data do parto, o sexo do animal, o peso do animal ao nascer, condição do nascimento (vivo ou morto) e a raça do animal.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.6 Controle de inseminações}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.5 Controle de inseminações}
                   &
 
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve gerenciar o histórico de inseminações realizadas nos animais, permitindo o registro de novas inseminações. Isso envolve a possibilidade de incluir informações como a identificação do touro e a data da inseminação.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.7 Controle de mastite}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.6 Controle de mastite}
                   &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de diagnósticos de mastites em animais, proporcionando a capacidade de adicionar novos diagnósticos. Para cada diagnóstico, o sistema deve permitir a inclusão da data, o tipo de mastite identificada e o resultado do teste CMT.}
     \\ \cline{1-2}
@@ -284,27 +229,27 @@ O requisito funcional descrito no \autoref{quad:requisitoManterAnimaisParte1} e 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.8 Controle de doenças}      &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.7 Controle de doenças}      &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de diagnósticos de doenças em animais, proporcionando a capacidade de adicionar novos diagnósticos. Para cada registro, o sistema deve permitir a descrição detalhada e a data da ocorrência.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.9 Controle de medicamentos} &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.8 Controle de medicamentos} &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de medicamentos aplicados em animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir vincular um medicamento previamente cadastrado a ser utilizado na aplicação, a forma da aplicação a dose e o princípio ativo.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.10 Controle de prenhez}     &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.9 Controle de prenhez}     &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de prenhez dos animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de diagnóstico e atualizar a data do último diagnóstico.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.11 Controle de vendas }     &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.10 Controle de vendas }     &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de vendas de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de venda, motivo da venda, peso do animal na venda, valor recebido e o destino do animal.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.12 Controle de compras}     &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.11 Controle de compras}     &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de compras de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de compra, data de nascimento, peso do animal na compra, valor pago.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 5.13 Controle de óbitos}      &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 4.12 Controle de óbitos}      &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve manter um histórico de óbitos de animais, proporcionando a capacidade de adicionar novos registros. Para cada registro, o sistema deve permitir inserir a data de óbito e o motivo do óbito.}
     \\ \cline{1-2}
   \end{tabular}
@@ -321,7 +266,7 @@ O requisito funcional delineado no \autoref{quad:requisitoControlePragasVegetais
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F6 - Controle de Pragas Vegetais}}
+    \multicolumn{2}{|l|}{\textbf{F5 - Controle de Pragas Vegetais}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
@@ -336,16 +281,12 @@ O requisito funcional delineado no \autoref{quad:requisitoControlePragasVegetais
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 6.1 Segurança de Acesso  &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    NF 5.1 Integridade na Listagem  &
+    \multicolumn{1}{|p{8cm}|}{\raggedright A interface deve garantir que a listagem de pragas seja filtrada e atualizada dinamicamente conforme a propriedade selecionada no contexto global.}
     \\ \cline{1-2}
 
-    NF 6.2 Auditoria de Acesso  &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
-    \\ \cline{1-2}
-
-    NF 6.3 Desempenho Eficiente &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
+    NF 5.2 Desempenho Eficiente &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando TanStack Query para otimização de requisições.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
@@ -361,7 +302,7 @@ O requisito funcional delineado no \autoref{quad:requisitoControleDoençasVegeta
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F7 - Controle de Doenças Vegetais}}
+    \multicolumn{2}{|l|}{\textbf{F6 - Controle de Doenças Vegetais}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
@@ -376,76 +317,12 @@ O requisito funcional delineado no \autoref{quad:requisitoControleDoençasVegeta
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 7.1 Segurança de Acesso  &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    NF 6.1 Tratamento de Erros  &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve fornecer \textit{feedback} claro em caso de falha na comunicação com o \textit{backend} durante o registro de ocorrências fitossanitárias.}
     \\ \cline{1-2}
 
-    NF 7.2 Auditoria de Acesso  &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
-    \\ \cline{1-2}
-
-    NF 7.3 Desempenho Eficiente &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
-    \\ \cline{1-2}
-  \end{tabular}
-  \fonte{} % Fonte
-\end{tabframed}
-
-\clearpage
-
-O requisito funcional descrito no \autoref{quad:requisitoControleFinanceiro}  aborda o cadastro de receitas e despesas financeiras em uma propriedade específica, detalhando os campos associados a esses registros. Além disso, são delineados os requisitos de segurança e validações necessários para acessar esse recurso.
-
-\begin{tabframed}[htb]
-  \caption{Controle Financeiro}
-  \label{quad:requisitoControleFinanceiro}
-  \renewcommand{\arraystretch}{1.5}
-  \begin{tabular}{|l|l|}
-    \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F8 - Controle Financeiro}}
-    \\ \cline{1-2}
-
-    \multicolumn{2}{|p{15cm}|}{
-    \raggedright \textbf{Descrição:} Registrar e editar informações de receitas e despesas financeiras identificadas na propriedade, possibilitando a inclusão da data da receita, vínculo do tipo da receita que deve estar previamente cadastrado, quantidade e unidade, valor em \gls{BRL}, descrição e poderá também vincular à um agrupamento. Além disso, o sistema deve efetuar o controle do histórico de receitas identificadas na propriedade.
-    }
-    \\ \cline{1-2}
-
-    \multicolumn{2}{|l|}{\textbf{Requisitos Não Funcionais}}
-    \\ \cline{1-2}
-
-    \textbf{Nome}                   &
-    \textbf{Restrição}
-    \\ \cline{1-2}
-
-    NF 8.1 Segurança de Acesso      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
-    \\ \cline{1-2}
-
-    NF 8.2 Auditoria de Acesso      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
-    \\ \cline{1-2}
-
-    NF 8.3 Desempenho Eficiente     &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
-    \\ \cline{1-2}
-
-    NF 8.4 Data do registro         &
-    \multicolumn{1}{|p{8cm}|}{\raggedright
-    O sistema deve preencher automaticamente a data da receita com a data atual, mas permitir que o usuário faça alterações conforme necessário.}
-    \\ \cline{1-2}
-
-    NF 8.5 Cadastro de agrupamentos &
-    \multicolumn{1}{|p{8cm}|}{\raggedright
-    O sistema deve permitir o cadastro de agrupamentos de receitas e despesas, para facilitar a visualização e análise dos dados.}
-    \\ \cline{1-2}
-
-    NF 8.6 Cadastro de unidade      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright
-    O sistema deve permitir o cadastro de unidades de medida para as receitas e despesas, para facilitar a visualização e análise dos dados.}
-    \\ \cline{1-2}
-
-    NF 8.7 Cadastro de tipos        &
-    \multicolumn{1}{|p{8cm}|}{\raggedright
-    O sistema deve permitir o cadastro de tipos de receitas e despesas, para facilitar a visualização e análise dos dados.}
+    NF 6.2 Desempenho Eficiente &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando TanStack Query para otimização de requisições.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{} % Fonte
@@ -461,7 +338,7 @@ O requisito funcional descrito no \autoref{quad:requisitoControleInsumos}  abord
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F9 - Controle de Insumos}}
+    \multicolumn{2}{|l|}{\textbf{F7 - Controle de Insumos}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
@@ -476,24 +353,20 @@ O requisito funcional descrito no \autoref{quad:requisitoControleInsumos}  abord
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    NF 9.1 Segurança de Acesso                       &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    NF 7.1 Consistência Visual                       &
+    \multicolumn{1}{|p{8cm}|}{\raggedright A interface deve sinalizar claramente quais campos de insumos são obrigatórios e validar os formatos de data e quantidade antes da submissão.}
     \\ \cline{1-2}
 
-    NF 9.2 Auditoria de Acesso                       &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    NF 7.2 Desempenho Eficiente                      &
+    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando TanStack Query para otimização de requisições.}
     \\ \cline{1-2}
 
-    NF 9.3 Desempenho Eficiente                      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
-    \\ \cline{1-2}
-
-    NF 9.4 Cadastro rápido de produto                &
+    NF 7.3 Cadastro rápido de produto                &
     \multicolumn{1}{|p{8cm}|}{\raggedright
     O sistema deve disponibilizar um mecanismo que permita o cadastro de um novo produto na tela de inclusão de um insumo, caso o produto digitado no campo não esteja cadastrado..}
     \\ \cline{1-2}
 
-    NF 9.5 Eficiência na Correspondência de Produtos &
+    NF 7.4 Eficiência na Correspondência de Produtos &
     \multicolumn{1}{|p{8cm}|}{\raggedright
     O sistema deve disponibilizar um mecanismo que permita a correspondência de produtos, caso o produto digitado no campo não esteja cadastrado.}
     \\ \cline{1-2}
@@ -511,12 +384,11 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegularParte1} e 
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|l|l|}
     \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F10 - Visita Regular}}
+    \multicolumn{2}{|l|}{\textbf{F8 - Visita Regular}}
     \\ \cline{1-2}
 
     \multicolumn{2}{|p{15cm}|}{
-    \raggedright \textbf{Descrição:} Este requisito envolve a inserção e edição de informações relacionadas a visita que o técnico realizará nas propriedades.
-    Além disso, abrange a manutenção das informações relacionadas a  visita, o que inclui atividades como registro disponibildiade de forragem, dados de bezerras e novilhas, dados de vacas e balancemaneto, dados financeiros, planejamento forageiro e alimentos disponíveis. Essas ações de manutenção são essenciais para o acompanhamento e gestão adequada da propriedade.
+    \raggedright \textbf{Descrição:} Este requisito envolve a manutenção das informações relacionadas à visita técnica, organizada de forma modular através de abas na interface. O técnico pode navegar e registrar dados sobre disponibilidade de forragem, bezerras e novilhas, vacas e balanceamento, planejamento forrageiro e alimentos disponíveis, sem a obrigatoriedade de um fluxo sequencial rígido. Essas ações de manutenção são essenciais para o acompanhamento e gestão adequada da propriedade.
     }
     \\ \cline{1-2}
 
@@ -527,24 +399,20 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegularParte1} e 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.1 Segurança de Acesso}           &
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir a segurança das informações, permitindo apenas o acesso de usuários autorizados, de acordo com seu nível e somente das propriedades vinculadas ao usuário logado.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.1 Reatividade da Interface}           &
+    \multicolumn{1}{|p{12cm}|}{\raggedright A interface deve reagir instantaneamente às seleções de abas, mantendo o estado dos dados preenchidos enquanto o técnico navega entre as diferentes seções da visita.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.2 Auditoria de Acesso}           &
-    \multicolumn{1}{|p{12cm}|}{\raggedright Deve haver um registro de todas as ações realizadas por usuários em diferentes níveis de acesso, permitindo a auditoria e rastreamento.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.2 Desempenho Eficiente}          &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando TanStack Query para otimização de requisições.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.3 Desempenho Eficiente}          &
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve garantir respostas eficientes por meio de estratégias de \textit{caching} no lado do cliente (\textit{frontend}), utilizando tecnologias como TanStack Query para otimização de requisições.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.3 Disponibilidade de forragem}   &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de disponibilidade de forragem, para um novo registro os campos como data, forrageira, entrada em centímetros, resíduo em centímetros, quilogramas por metro quadrado, área piquete em metros quadrados, eficiência em porcentagem, número de vacas e o quilograma de MN/Vaca devem ser preenchidos.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.4 Disponibildiade de forragem}   &
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de disponibildiade de forragem, para um novo registro os campos como data, forregeira, entrada em centímetros, resíduo em centímetros, quilogramas por metro quadrado, área piquete em metros quadrados, eficiência em porcentagem, número de vacas e o quilograma de MN/Vaca devem ser preenchidos.}
-    \\ \cline{1-2}
-
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.5  Dados de bezerras e novilhas} &
-    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de bezerras e novilhas, para um novo registro os campos como identificação do animal, tipo de raça, data de nascimento, peso ao nascer, peso atual e \gls{ECC} devem ser preenchidos. Caso seja um animal existente as informações serão recuperadas através da identificação do animal e preenchidas nos campos, sem haver necessidade de preenchimento manual, exceto os campos de \gls{ECC} e pesagem atual. O sistema deve impedir o relacionamento de vacas com relação de parto, venda ou óbito. Ao final do prenchimento dos dados do animal, o sistema deve gerar resultados referente ao mesmo.}
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.4  Dados de bezerras e novilhas} &
+    \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de bezerras e novilhas, para um novo registro os campos como identificação do animal, tipo de raça, data de nascimento, peso ao nascer, peso atual e \gls{ECC} devem ser preenchidos. Caso seja um animal existente as informações serão recuperadas através da identificação do animal e preenchidas nos campos, sem haver necessidade de preenchimento manual, exceto os campos de \gls{ECC} e pesagem atual. O sistema deve impedir o relacionamento de animais com relação de venda ou óbito. Ao final do preenchimento dos dados do animal, o sistema deve gerar resultados referente ao mesmo.}
     \\ \cline{1-2}
   \end{tabular}
   \fonte{}
@@ -561,19 +429,19 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegularParte1} e 
     \textbf{Restrição}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3.2cm}|}{\raggedright NF 10.6 Formulação de ração para bezerras} &
+    \multicolumn{1}{|p{3.2cm}|}{\raggedright NF 8.5 Formulação de ração para bezerras} &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir a visualização das exigências nutricionais enviadas pela \gls{API}, possibilitando que o técnico realize o balanceamento da dieta e acompanhe, via interface, os indicadores de conformidade (Normal, Acima ou Abaixo) para cada nutriente.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.7 Formulação de ração para novilhas}   &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.6 Formulação de ração para novilhas}   &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve exibir as exigências nutricionais específicas para as novilhas, permitindo que o técnico utilize esses dados como guia para o balanceamento da ração e visualize o status de conformidade nutricional em tempo real.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.8 Dados de vacas e balanceamento}      &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.7 Dados de vacas e balanceamento}      &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve permitir o cadastro de vacas na visita; caso o animal buscado já esteja inserido na propriedade, o técnico apenas terá que atualizar campos como \gls{ECC}, peso vivo, produção de leite, teor de gordura, teor de proteína, contagem de células somáticas, contagem padrão em placa e nitrogênio ureico no leite.}
     \\ \cline{1-2}
 
-    \multicolumn{1}{|p{3cm}|}{\raggedright NF 10.9 Formulação de ração para vacas}      &
+    \multicolumn{1}{|p{3cm}|}{\raggedright NF 8.8 Formulação de ração para vacas}      &
     \multicolumn{1}{|p{12cm}|}{\raggedright O sistema deve apresentar as exigências nutricionais para as vacas, servindo como suporte visual para que o técnico realize o balanceamento e monitore, por meio de indicadores de status, os níveis de \gls{IMS}, \gls{NDT}, \gls{PB}, \gls{Ca} e \gls{P}.}
     \\ \cline{1-2}
   \end{tabular}
@@ -582,48 +450,8 @@ O requisito funcional descrito no \autoref{quad:requisitoVisitaRegularParte1} e 
 
 \clearpage
 
-No \autoref{quad:requisitoCadastroProdutor} é apresentado o requisito funcional de Cadastro de Produtor, que é fundamental para as propriedades. Os requisitos não funcionais relacionados a este requisito descrevem os dados necessários para efetuar o registro do produtor, incluindo informações relevantes ao processo de criação da conta.
-
-\begin{tabframed}[htb]
-  \caption{Cadastro do produtor}
-  \label{quad:requisitoCadastroProdutor}
-  \renewcommand{\arraystretch}{1.5}
-  \begin{tabular}{|l|l|}
-    \cline{1-2}
-    \multicolumn{2}{|l|}{\textbf{F11 - Cadastro do produtor} }
-    \\ \cline{1-2}
-
-    \multicolumn{2}{|p{15cm}|}{
-    \raggedright \textbf{Descrição:} O sistema deve permitir o cadastro de produtores para vincular em propriedades. O sistema deve solicitar as informações necessárias para criar um produtor, incluindo nome completo, CPF, email e telefone.
-    }
-    \\ \cline{1-2}
-
-    \multicolumn{2}{|l|}{\textbf{Requisitos Não-Funcionais}}
-    \\ \cline{1-2}
-
-    \textbf{Nome}                   &
-    \textbf{Restrição}
-    \\ \cline{1-2}
-
-    NF 11.1 Segurança de Dados      &
-    \multicolumn{1}{|p{8cm}|}{\raggedright Os dados dos produtores, incluindo informações pessoais, devem ser armazenados de forma segura e protegidos contra acesso não autorizado.}
-    \\ \cline{1-2}
-
-    NF 11.2 Validações ao cadastrar &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O sistema deve validar os dados informados pelo usuário e não deve permitir cadastro em situações de email ou CPF já existente.}
-    \\ \cline{1-2}
-
-    NF 11.3 Usabilidade             &
-    \multicolumn{1}{|p{8cm}|}{\raggedright O processo de cadastro deve ser intuitivo e fácil de ser realizado, com instruções claras para o usuário. O sistema deve fornecer feedback imediato em caso de erros ou campos obrigatórios não preenchidos.}
-    \\ \cline{1-2}
-  \end{tabular}
-  \fonte{} % Fonte
-\end{tabframed}
-
-\clearpage
-
 \subsection{Casos de uso}\label{subsec:casosDeUso}
-No \autoref{quad:casosDeUso} são listados os casos de uso, os atores e os requisitos funcionais que estã associados em cada um dos casos.
+No \autoref{quad:casosDeUso} são listados os casos de uso e os requisitos funcionais associados. Como o sistema atual foca na interface do técnico, todos os casos de uso referem-se ao usuário autenticado com perfil técnico.
 
 \begin{tabframed}[htb]
   \caption{Casos de Uso}
@@ -640,57 +468,29 @@ No \autoref{quad:casosDeUso} são listados os casos de uso, os atores e os requi
     \cline{1-4}
     UC1                     &
     Adicionar novo registro &
-    Administrador           &
-    F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11
+    Técnico                 &
+    F1, F2, F3, F4, F5, F6, F7, F8
     \\
 
     \cline{1-4}
     UC2                     &
     Editar registro         &
-    Administrador           &
-    F1, F2, F4, F5, F6, F7, F8, F9, F10, F11
+    Técnico                 &
+    F3, F4, F5, F6, F7, F8
     \\
 
     \cline{1-4}
     UC3                     &
     Apagar registro         &
-    Administrador           &
-    F1, F2, F4, F5, F6, F7, F8, F9, F10, F11
+    Técnico                 &
+    F3, F4, F5, F6, F7, F8
     \\
 
     \cline{1-4}
     UC4                     &
     Listar registros        &
-    Administrador           &
-    F1, F2, F4, F5, F6, F7, F8, F9, F10, F11
-    \\
-
-    \cline{1-4}
-    UC5                     &
-    Adicionar novo registro &
     Técnico                 &
-    F1, F3, F4, F5, F6, F7, F8, F9, F10, F11
-    \\
-
-    \cline{1-4}
-    UC6                     &
-    Editar registro         &
-    Técnico                 &
-    F4, F5, F6, F7, F8, F9, F10, F11
-    \\
-
-    \cline{1-4}
-    UC7                     &
-    Apagar registro         &
-    Técnico                 &
-    F4, F5, F6, F7, F8, F9, F10, F11
-    \\
-
-    \cline{1-4}
-    UC8                     &
-    Listar registros        &
-    Técnico                 &
-    F4, F5, F6, F7, F8, F9, F10, F11
+    F3, F4, F5, F6, F7, F8
     \\
 
     \cline{1-4}
@@ -704,7 +504,7 @@ A \autoref{fig:casosDeUso} apresenta o diagrama dos casos de uso do sistema, exi
   \captionsetup{width=0.5\textwidth}
   \caption{Diagrama de Casos de Uso}
   \label{fig:casosDeUso}
-  \includegraphics[scale=0.2]{idr-use-case-diagram}
+  \includegraphics[scale=0.8]{idr-use-case-diagram}
   \fonte{}
 \end{figure}
 
@@ -716,7 +516,7 @@ A \autoref{fig:idr-er-diagram-green}, \autoref{fig:idr-er-diagram-yellow} e \aut
 
 \begin{itemize}
   \item Usuário: Responsável por armazenar os dados do usuário que tenham acesso ao sistema e suas permissões.
-  \item Propriedade: Responsável por coletar informações relativas às propriedades, incluindo sua localização, ocupação e os usuários com acesso aos dados. Essas informações servem como ponto de partida para acessar os diferentes módulos do sistema.
+  \item Propriedade: Responsável por coletar informações relativas às propriedades, incluindo sua localização, ocupação e os usuários com acesso aos dados. Atualmente, os dados básicos do produtor proprietário são integrados diretamente nesta entidade.
   \item Animal: Encarregado de manter o registro dos animais em uma propriedade específica, sendo o ponto de origem para o registro de manutenções e outros dados relacionados a diferentes módulos/entidades dentro do sistema.
 \end{itemize}
 

@@ -8,69 +8,50 @@ Este capítulo está estruturado em duas partes iniciais. A primeira aborda os e
 
 Esta seção fornece uma breve visão geral das principais ferramentas empregadas no desenvolvimento do sistema proposto. As ferramentas utilizadas estão listadas no \autoref{quad:materiais}
 
-\begin{tabframed}[htb]
-  \caption{Lista de ferramentas e tecnologias}
-  \label{quad:materiais}
-  \renewcommand{\arraystretch}{2}
-  \begin{tabular}{|l|l|l|l|}
-    \cline{1-4}
-    \textbf{Ferramenta/Tecnologia}    &
-    \textbf{Versão}                   &
-    \textbf{Disponível em}            &
-    \textbf{Finalidade}
-    \\ \cline{1-4}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\footnotesize
+\makeatletter
+\def\LTcaptype{tabframed}
+\makeatother
+\begin{longtable}{|p{4.2cm}|p{1.2cm}|p{4.3cm}|p{4.8cm}|}
+  \caption{Lista de ferramentas e tecnologias} \label{quad:materiais} \\
+  \hline
+  \textbf{Ferramenta/Tecnologia} & \textbf{Versão} & \textbf{Disponível em} & \textbf{Finalidade} \\ \hline
+  \endfirsthead
+  \caption[]{Lista de ferramentas e tecnologias (continuação)} \\
+  \hline
+  \textbf{Ferramenta/Tecnologia} & \textbf{Versão} & \textbf{Disponível em} & \textbf{Finalidade} \\ \hline
+  \endhead
+  \hline
+  \multicolumn{4}{r}{\footnotesize Continua na próxima página} \\
+  \endfoot
+  \hline
+  \multicolumn{4}{l}{\footnotesize \textbf{Fonte:} Autoria própria (\the\year).} \\
+  \endlastfoot
 
-    \gls{VSCode}                      &
-    latest                            &
-    https://code.visualstudio.com/    &
-    Editor de código-fonte
-    \\ \cline{1-4}
-
-    TypeScript                        &
-    latest                            &
-    https://www.typescriptlang.org/   &
-    Lingugagem de programação
-    \\ \cline{1-4}
-
-    React                             &
-    18.x.x                            &
-    https://react.dev/                &
-    \multicolumn{1}{|p{4cm}|}{\raggedright Biblioteca para construir \gls{UI} interativas e reativas em aplicações web}
-    \\ \cline{1-4}
-
-    Linaria                           &
-    5.x.x                             &
-    https://linaria.dev/              &
-    \multicolumn{1}{|p{4cm}|}{\raggedright Biblioteca para estilização \textit{css-in-js}}
-    \\ \cline{1-4}
-
-    Storybook                         &
-    7.x.x                             &
-    https://storybook.js.org/         &
-    \multicolumn{1}{|p{4cm}|}{\raggedright Documentar, testar e visualizar componentes de \gls{UI}}
-    \\ \cline{1-4}
-
-    LucidChart                        &
-                                      &
-    https://www.lucidchart.com/pages/ &
-    \multicolumn{1}{|p{4cm}|}{\raggedright Ferramenta para criação de diagramas}
-    \\ \cline{1-4}
-
-    Figma                             &
-                                      &
-    https://www.figma.com/            &
-    \multicolumn{1}{|p{4cm}|}{\raggedright Ferramenta para criação de protótipos de interfaces}
-    \\ \cline{1-4}
-
-    \multicolumn{1}{|p{4cm}|}{\raggedright Planilhas eletrônicas disponibilizadas pelo \gls{IDR-PR}} 
-                                      &
-                                      &
-                                      &
-    \multicolumn{1}{|p{4cm}|}{\raggedright Estudo do projeto e uso para levamento de requisitos}
-    \\ \cline{1-4}
-  \end{tabular}
-  \fonte{}%% Fonte
-\end{tabframed}
+  \gls{VSCode} & latest & \url{https://code.visualstudio.com/} & Editor de código-fonte \\ \hline
+  TypeScript & 5.x.x & \url{https://www.typescriptlang.org/} & Linguagem de programação fortemente tipada \\ \hline
+  React & 18.x.x & \url{https://react.dev/} & Biblioteca para construir \gls{UI} interativas e reativas \\ \hline
+  Vite & 5.x.x & \url{https://vitejs.dev/} & Ferramenta de compilação de alta performance \\ \hline
+  TailwindCSS & 3.x.x & \url{https://tailwindcss.com/} & \textit{Framework} CSS utilitário para estilização rápida \\ \hline
+  TanStack Query & 5.x.x & \url{https://tanstack.com/query} & Gerenciamento de estado assíncrono e \textit{caching} \\ \hline
+  \gls{MSW} & 2.x.x & \url{https://mswjs.io/} & Interceptação e simulação de chamadas \gls{API} \\ \hline
+  Zod & 3.x.x & \url{https://zod.dev/} & Validação e definição de esquemas de dados \\ \hline
+  React Hook Form & 7.x.x & \url{https://react-hook-form.com/} & Criação e gerenciamento de formulários com validação \\ \hline
+  Radix UI & 1.x.x & \url{https://www.radix-ui.com/} & Primitivas de \gls{UI} acessíveis e sem estilização \\ \hline
+  LucideReact & 0.x.x & \url{https://lucide.dev/} & Conjunto de ícones vetoriais (\gls{SVG}) para interface \\ \hline
+  Axios & 1.x.x & \url{https://axios-http.com/} & Cliente \gls{HTTP} para consumo de serviços \gls{API} \\ \hline
+  ReactRouter & 6.x.x & \url{https://reactrouter.com/} & Gerenciamento de rotas e navegação entre telas \\ \hline
+  date-fns & 4.x.x & \url{https://date-fns.org/} & Manipulação, cálculo e formatação de datas \\ \hline
+  ReactDayPicker & 8.x.x & \url{https://react-day-picker.js.org/} & Componente de calendário para seleção de datas \\ \hline
+  TanStackTable & 8.x.x & \url{https://tanstack.com/table} & Gerenciamento de estado para tabelas complexas \\ \hline
+  Storybook & 8.x.x & \url{https://storybook.js.org/} & Documentar e visualizar componentes de \gls{UI} \\ \hline
+  LucidChart & & \url{https://www.lucidchart.com/pages/} & Ferramenta para criação de diagramas \\ \hline
+  Figma & & \url{https://www.figma.com/} & Ferramenta para criação de protótipos de interfaces \\ \hline
+  \raggedright Planilhas eletrônicas do \gls{IDR-PR} & & & Estudo do projeto e levantamento de requisitos \\ \hline
+\end{longtable}
+\endgroup
 
 \subsection{Visual Studio Code}\label{subsec:vscode}
 
@@ -90,8 +71,8 @@ Além disso, o React se baseia na premissa de que a manipulação do \gls{DOM} �
 
 \section{Método}\label{sec:metodo}
 
-Para o desenvolvimento deste projeto, será adotada uma abordagem ágil, conforme sugerido por \citeonline{Pontes:2019:MetodologiasAgeisDesenvolvimentoSoftwares}. A metodologia ágil permitirá a coleta contínua de \textit{feedbacks} ao longo das \textit{sprints} e marcos do projeto, visando efetuar melhorias com base nesses retornos.
-Além disso, a metodologia ágil permitirá a adaptação do projeto às mudanças de requisitos e necessidades do cliente, que poderão ocorrer durante o desenvolvimento.
+Para o desenvolvimento deste projeto, foi adotada uma abordagem ágil, conforme sugerido por \citeonline{Pontes:2019:MetodologiasAgeisDesenvolvimentoSoftwares}. A metodologia ágil permitiu a coleta contínua de \textit{feedbacks} ao longo das \textit{sprints} e marcos do projeto, visando efetuar melhorias com base nesses retornos.
+Além disso, a metodologia ágil permitiu a adaptação do projeto às mudanças de requisitos e necessidades do cliente, que ocorreram durante o desenvolvimento.
 
 Inicialmente, o levantamento de requisitos foi realizado por meio de reuniões \textit{online} e entrevistas não estruturadas com os técnicos do \gls{IDR-PR}. O objetivo dessas interações foi compreender o fluxo de trabalho atual da equipe, que se baseava no uso de planilhas eletrônicas para controlar os dados das propriedades rurais. 
 
@@ -99,7 +80,7 @@ Para complementar as informações coletadas, foi feita uma análise de document
 
 Após o entendimento das funcionalidades e da organização dos dados nos documentos, foram definidos os requisitos funcionais e não funcionais do sistema, além da criação dos diagramas de casos de uso.
 
-Na etapa seguinte, realizou-se a prototipação das telas do sistema para melhorar a compreensão visual do projeto. Isso ajudou a remover partes desnecessárias antes da programação e permitiu avaliar a experiência do usuário de forma antecipada.
+Na etapa seguinte, realizou-se a prototipação das telas do sistema para melhorar a compreensão visual do projeto. Isso permitiu a remoção de partes desnecessárias antes da programação e a avaliação da experiência do usuário de forma antecipada.
 
 A seguir, iniciou-se o processo de desenvolvimento do sistema. Simultaneamente à programação, foram realizados testes manuais de validação. O objetivo desses testes foi verificar se as funcionalidades atendiam aos requisitos definidos e se as regras de negócio estavam corretas, permitindo a correção imediata de eventuais erros.
 
