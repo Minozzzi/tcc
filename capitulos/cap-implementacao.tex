@@ -4,7 +4,7 @@ Nesta seção, é apresentado o cliente \textit{web} desenvolvido para o gerenci
 
 \subsection{Autenticação e Registro de Técnicos}\label{subsec:apresentacaoLogin}
 
-O acesso ao sistema inicia-se pela tela de autenticação (\autoref{fig:sys-login}), onde o técnico informa suas credenciais. Esta interface segue a identidade visual do \gls{IDR-PR}, garantindo que cada profissional acesse exclusivamente as propriedades sob sua responsabilidade técnica.
+O acesso ao sistema inicia-se pela tela de autenticação, exibida na \autoref{fig:sys-login}, nela o técnico informa suas credenciais. Esta interface segue a identidade visual do \gls{IDR-PR}, garantindo que cada profissional acesse exclusivamente as propriedades sob sua responsabilidade técnica.
 
 \begin{figure}[htpb]
   \centering
@@ -14,7 +14,7 @@ O acesso ao sistema inicia-se pela tela de autenticação (\autoref{fig:sys-logi
   \fonte{Autoria própria (2026)}
 \end{figure}
 
-Para garantir a integridade dos dados desde o primeiro contato, todos os formulários do sistema utilizam validações rigorosas via biblioteca Zod. Na \autoref{fig:sys-cadastro-tecnico-validacao}, observa-se o comportamento do formulário de cadastro de técnicos ao detectar campos obrigatórios ausentes ou formatos inválidos após a tentativa de avanço para a próxima etapa. O sistema impede o envio à \gls{API} enquanto as pendências não forem resolvidas, fornecendo \textit{feedback} visual imediato.
+Para garantir a integridade dos dados desde o primeiro contato, todos os formulários do sistema utilizam validações via biblioteca Zod. Na \autoref{fig:sys-cadastro-tecnico-validacao}, observa-se o comportamento do formulário de cadastro de técnicos ao detectar campos obrigatórios ausentes ou formatos inválidos após a tentativa de avanço para a próxima etapa. O sistema impede o envio à \gls{API} enquanto as pendências não forem resolvidas, fornecendo \textit{feedback} visual imediato.
 
 \begin{figure}[htpb]
   \centering
@@ -28,7 +28,7 @@ Para garantir a integridade dos dados desde o primeiro contato, todos os formul�
 
 \subsection{Gestão de Propriedades e Navegação Modular}\label{subsec:apresentacaoPropriedades}
 
-A listagem de propriedades (\autoref{fig:sys-propriedades}) é o ponto de partida para o trabalho técnico. Esta interface conta com um sistema de pesquisa global que utiliza a técnica de \textit{Debounce}, processando os filtros apenas após a interrupção da digitação para otimizar o uso da rede. A tabela permite a ordenação dinâmica por qualquer coluna (Produtor, Propriedade ou Município) e uma paginação fluida para navegação em grandes inventários.
+A listagem de propriedades, exibida na \autoref{fig:sys-propriedades}, é o ponto de partida para o trabalho técnico. Esta interface conta com um sistema de pesquisa global que utiliza a técnica de \textit{Debounce}, processando os filtros apenas após a interrupção da digitação para otimizar o uso da rede. A tabela permite a ordenação dinâmica por qualquer coluna (Produtor, Propriedade ou Município) e paginação para navegação no caso de um volume grande de registros.
 
 \begin{figure}[htpb]
   \centering
@@ -38,7 +38,7 @@ A listagem de propriedades (\autoref{fig:sys-propriedades}) é o ponto de partid
   \fonte{Autoria própria (2026)}
 \end{figure}
 
-Para navegar nos detalhes da propriedade, o técnico pode clicar na linha da propriedade que deseja acessar. Ao clicar, o sistema carrega o painel central (\autoref{fig:sys-propriedade-detalhes}), onde o cabeçalho exibe dinamicamente o nome da fazenda e do produtor. A interface é organizada em abas (Dados da Terra, Animais, Cultivos, etc.), permitindo que o técnico gerencie submódulos como máquinas e forrageiras sem perder o contexto da unidade produtiva.
+Para navegar nos detalhes da propriedade, o técnico pode clicar na linha da propriedade que deseja acessar. Ao clicar, o sistema carrega o painel central, ilustrado na \autoref{fig:sys-propriedade-detalhes}, no qual o cabeçalho exibe dinamicamente o nome da fazenda e do produtor. A interface é organizada em abas (Dados da Terra, Animais, Cultivos, etc.), permitindo que o técnico gerencie submódulos como máquinas e forrageiras sem perder o contexto da unidade produtiva.
 
 \begin{figure}[htpb]
   \centering
@@ -50,7 +50,7 @@ Para navegar nos detalhes da propriedade, o técnico pode clicar na linha da pro
 
 \clearpage
 
-Para a expansão da base de dados, o sistema oferece um formulário de cadastro de propriedades estruturado em abas (\autoref{fig:sys-propriedade-cadastro}), onde informações de colaboradores e localização geográfica são coletadas de forma segregada, garantindo uma interface limpa e organizada.
+Para a expansão da base de dados, o sistema oferece um formulário de cadastro de propriedades estruturado em abas, como pode ser visto na \autoref{fig:sys-propriedade-cadastro}, em que informações de colaboradores e localização geográfica são coletadas de forma segregada, garantindo uma interface limpa e organizada.
 
 \begin{figure}[htpb]
   \centering
@@ -64,7 +64,7 @@ Para a expansão da base de dados, o sistema oferece um formulário de cadastro 
 
 \subsection{Módulo de Animais}\label{subsec:apresentacaoAnimais}
 
-A gestão do rebanho permite um controle cirúrgico do plantel por meio de uma interface dedicada (\autoref{fig:sys-animais}).
+A gestão do rebanho permite um controle cirúrgico do plantel por meio de uma interface dedicada, como pode ser visualizado na \autoref{fig:sys-animais}.
 
 \begin{figure}[htpb]
   \centering
@@ -76,7 +76,7 @@ A gestão do rebanho permite um controle cirúrgico do plantel por meio de uma i
 
 \clearpage
 
-Ao clicar na linha de um animal específico na listagem, o técnico acessa os detalhes clínicos e zootécnicos individuais. A tela expande-se para exibir um conjunto de subabas que representam o histórico completo do animal (\autoref{fig:sys-animal-detalhes}). Por meio dessas abas, o sistema permite a rastreabilidade abrangente de dados críticos, incluindo registros de partos, acompanhamento das fases de bezerra e novilha, diagnósticos de doenças e mastite, além do controle de entradas e saídas por meio de compras, vendas e óbitos. O sistema também permite o registro detalhado de inseminações, aplicações de medicamentos e diagnósticos de gestação.
+Ao clicar na linha de um animal específico na listagem, o técnico acessa os detalhes clínicos e zootécnicos individuais. A tela expande-se para exibir um conjunto de subabas que representam o histórico completo do animal, conforme apresentado na \autoref{fig:sys-animal-detalhes}. Por meio dessas abas, o sistema permite a rastreabilidade abrangente de dados críticos, incluindo registros de partos, acompanhamento das fases de bezerra e novilha, diagnósticos de doenças e mastite, além do controle de entradas e saídas por meio de compras, vendas e óbitos. O sistema também permite o registro detalhado de inseminações, aplicações de medicamentos e diagnósticos de gestação.
 
 \begin{figure}[htpb]
   \centering
@@ -88,7 +88,7 @@ Ao clicar na linha de um animal específico na listagem, o técnico acessa os de
 
 \clearpage
 
-A \autoref{fig:sys-animal-submodulo} ilustra o submódulo de inseminações, que atua como um exemplo prático das diversas categorias de registros disponíveis. Neste ambiente, é possível cadastrar e consultar cada tentativa de reprodução e o status de prenhez, mantendo a rastreabilidade completa necessária para as auditorias do \gls{IDR-PR}.
+A \autoref{fig:sys-animal-submodulo} ilustra o submódulo de inseminações, que atua como um exemplo prático das diversas categorias de registros disponíveis. Neste ambiente, é possível cadastrar e consultar cada tentativa de reprodução e a situação de prenhez, mantendo a rastreabilidade completa necessária para as auditorias do \gls{IDR-PR}.
 
 \begin{figure}[htpb]
   \centering
@@ -104,7 +104,7 @@ A arquitetura dessa interface de detalhes consolida o conceito de "prontuário �
 
 \subsection{Balanceamento Nutricional de Precisão}\label{subsec:apresentacaoNutricao}
 
-A funcionalidade mais complexa do sistema é o balanceamento nutricional. A interface de Novo Balanceamento organiza-se em duas abas complementares (Visão Geral e Nutrição), sob um cabeçalho persistente que atua como suporte à navegação entre os animais da propriedade (\autoref{fig:sys-balanceamento-visao-geral-header}). Esta funcionalidade permite que o técnico alterne sequencialmente entre os animais do lote (\textit{Animal X de N}) de forma global, mantendo o contexto de navegação independentemente da sub-aba selecionada, o que garante maior agilidade operacional.
+A funcionalidade mais complexa do sistema é o balanceamento nutricional. A interface de Novo Balanceamento organiza-se em duas abas complementares (Visão Geral e Nutrição), sob um cabeçalho persistente que atua como suporte à navegação entre os animais da propriedade, como exibido na \autoref{fig:sys-balanceamento-visao-geral-header}. Esta funcionalidade permite que o técnico alterne sequencialmente entre os animais do lote (\textit{Animal X de N}) de forma global, mantendo o contexto de navegação independentemente da sub-aba selecionada, o que garante maior agilidade operacional.
 
 \begin{figure}[htpb]
   \centering
@@ -116,7 +116,7 @@ A funcionalidade mais complexa do sistema é o balanceamento nutricional. A inte
 
 \clearpage
 
-Na aba de Visão Geral, abaixo da navegação global, encontra-se o bloco de \textbf{Resumo Nutricional} (\autoref{fig:sys-balanceamento-visao-geral}). Este bloco exibe indicadores fundamentais do processamento da dieta, como o percentual de \gls{EE} da ração, o total de \gls{MS} consumida e as relações percentuais entre volumoso e concentrado. O sistema também calcula e apresenta a relação entre \gls{PDR} e \gls{NDT}, bem como o nível de \gls{CNF}. Esta visão garante uma análise resumida do animal em questão do rebanho.
+Na aba de Visão Geral, abaixo da navegação global, encontra-se o bloco de \textbf{Resumo Nutricional}, ilustrado na \autoref{fig:sys-balanceamento-visao-geral}. Este bloco exibe indicadores fundamentais do processamento da dieta, como o percentual de \gls{EE} da ração, o total de \gls{MS} consumida e as relações percentuais entre volumoso e concentrado. O sistema também calcula e apresenta a relação entre \gls{PDR} e \gls{NDT}, bem como o nível de \gls{CNF}. Esta visão garante uma análise resumida do animal em questão do rebanho.
 
 \begin{figure}[htpb]
   \centering
@@ -128,7 +128,7 @@ Na aba de Visão Geral, abaixo da navegação global, encontra-se o bloco de \te
 
 Na interface de Nutrição, o técnico realiza a manipulação direta da dieta. O suporte à decisão ocorre através de uma comparação visual em tempo real entre as exigências calculadas pela \gls{API} e os alimentos oferecidos. 
 
-À medida que o técnico adiciona ou remove ingredientes via formulário (\autoref{fig:sys-balanceamento-ingrediente-form}), o sistema atualiza instantaneamente a listagem de ingredientes (\autoref{fig:sys-balanceamento-ingredientes-lista}) e os indicadores visuais de conformidade. Diferente de uma simples coleta de dados, a interface sinaliza com cores e rótulos específicos se o nutriente está em nível Normal, Acima ou Abaixo do esperado. Conforme ilustrado na \autoref{fig:sys-balanceamento-nutricao}, o sistema monitora simultaneamente múltiplos indicadores críticos, como \gls{IMS}, \gls{NDT}, \gls{PB}, \gls{Ca} e \gls{P}, garantindo que o técnico identifique desequilíbrios nutricionais de forma imediata e tome decisões informadas.
+À medida que o técnico adiciona ou remove ingredientes via formulário, apresentado na \autoref{fig:sys-balanceamento-ingrediente-form}, o sistema atualiza instantaneamente a listagem de ingredientes, exibida na \autoref{fig:sys-balanceamento-ingredientes-lista}, e os indicadores visuais de conformidade. Diferente de uma simples coleta de dados, a interface sinaliza com cores e rótulos específicos se o nutriente está em nível Normal, Acima ou Abaixo do esperado. Conforme ilustrado na \autoref{fig:sys-balanceamento-nutricao}, o sistema monitora simultaneamente múltiplos indicadores críticos, como \gls{IMS}, \gls{NDT}, \gls{PB}, \gls{Ca} e \gls{P}, garantindo que o técnico identifique desequilíbrios nutricionais de forma imediata e tome decisões informadas.
 
 \begin{figure}[htpb]
   \centering
@@ -156,19 +156,21 @@ Na interface de Nutrição, o técnico realiza a manipulação direta da dieta. 
 
 \clearpage
 
-Em suma, as interfaces de balanceamento nutricional transcendem a simples entrada de dados, consolidando-se como uma ferramenta estratégica de suporte à decisão. A integração entre a visualização resumida do animal e o suporte visual dinâmico durante a formulação da ração permite que o técnico execute ajustes precisos com agilidade, refletindo diretamente na eficiência produtiva e na saúde do plantel monitorado pelo \gls{IDR-PR}.
+Em resumo, as interfaces de balanceamento nutricional serão de grande importância para os técnicos do \gls{IDR-PR}, pois concentram toda a informação nutricional relacionada ao rebanho leiteiro das propriedades gerenciadas. A integração entre a visualização resumida do animal e o suporte visual dinâmico durante a formulação da ração permite que o técnico execute ajustes precisos com facilidade, refletindo diretamente na eficiência produtiva e na saúde do rebanho monitorado pelo \gls{IDR-PR}.
 
 \section{Implementação do sistema}\label{sec:implementacaoSistema}
 
-A implementação do cliente \textit{web} pautou-se na excelência técnica e no uso de padrões arquiteturais que favorecem o crescimento sustentável do software. Adotou-se o paradigma da programação reativa com a biblioteca React, utilizando TypeScript para garantir a segurança de tipos em toda a aplicação. A organização do código baseia-se em uma adaptação da \textit{Clean Architecture} dividida em diretórios independentes, focada na separação de responsabilidades.
+A implementação do cliente \textit{web} teve como principal característica o uso de padrões arquiteturais que favorecem o crescimento sustentável do software. Adotou-se o paradigma da programação reativa com a biblioteca React, utilizando TypeScript para garantir a segurança de tipos em toda a aplicação. A organização do código baseia-se em uma adaptação da \textit{Clean Architecture} dividida em diretórios independentes, focada na separação de responsabilidades. Para suportar esta interface gráfica, foram criados componentes visuais genéricos como: \textit{alert-dialog, avatar, badge, breadcrumb, button, calendar, card, combobox, command, data-table, date-picker, dialog, dropdown, dropzone, form, header, input, label, loading, pagination, popover, scroll-area, select, sheet, sidebar, table, tabs, textarea, tooltip} e \textit{wave}.
 
 \subsection{Infraestrutura e Configuração Base (\texttt{core})}\label{subsec:arquiteturaCore}
 
 O diretório \texttt{core} consolida todos os protocolos globais, tipos genéricos e a infraestrutura de rede necessária. Uma das principais responsabilidades desta camada é a orquestração de requisições via contrato genérico \texttt{HttpClient}, que isola a dependência direta de bibliotecas externas como o Axios. 
 
-Este contrato define uma estrutura única que padroniza as chamadas de comunicação para todo o sistema (\autoref{lst:http-client}). Ele engloba desde chamadas de busca individual (\textit{get one}) e de listagem (\textit{table data}), até operações de mutação como \textit{POST} (para criação), \textit{PUT} e \textit{PATCH} (para atualizações integrais ou parciais) e \textit{DELETE} (para remoções lógicas ou físicas). Ao encapsular todos esses métodos \gls{HTTP}, a camada \texttt{core} devolve os dados em um formato estritamente tipado, garantindo que módulos como o de Animais e Propriedades não precisem reescrever a lógica de integração de rede nem os tratamentos de resposta.
+Este contrato define uma estrutura única que padroniza as chamadas de comunicação para todo o sistema, conforme ilustrado no \autoref{lst:http-client}. Ele engloba desde chamadas de busca individual (\textit{get one}) e de listagem (\textit{table data}), até operações de mutação como \textit{POST} (para criação), \textit{PUT} e \textit{PATCH} (para atualizações integrais ou parciais) e \textit{DELETE} (para remoções lógicas ou físicas). Ao encapsular todos esses métodos \gls{HTTP}, a camada \texttt{core} devolve os dados em um formato estritamente tipado, garantindo que módulos como o de Animais e Propriedades não precisem reescrever a lógica de integração de rede nem os tratamentos de resposta.
 
-\begin{lstlisting}[language=TypeScript, caption={Contrato Genérico de HttpClient}, label={lst:http-client}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:http-client}Contrato Genérico de HttpClient}
+\begin{lstlisting}[language=TypeScript]
 export type HttpMethod = 'get' | 'post' | 'delete' | 'patch' | 'put'
 
 export type HttpRequest<TModel = Record<string, string>, TApiModel = unknown> = {
@@ -185,10 +187,14 @@ export type HttpClient<TModel = unknown, TApiModel = unknown, TApiResponse = TAp
   request: (data: HttpRequest<TModel, TApiModel>) => Promise<HttpResponse<TApiResponse>>
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-Para conferir realismo ao ambiente de desenvolvimento, o sistema utiliza o \gls{MSW}. Além de interceptar as chamadas, implementou-se uma lógica de \textbf{simulação de atraso (\textit{delay})} nas respostas (\autoref{lst:msw-delay}), forçando a interface a lidar com estados de carregamento de forma realista.
+Para conferir realismo ao ambiente de desenvolvimento, o sistema utiliza o \gls{MSW}\footnote{Mock Service Worker (MSW) é uma biblioteca de simulação de \gls{API} que permite interceptar requisições em nível de rede para simular respostas.}. Além de interceptar as chamadas, implementou-se uma lógica de \textbf{simulação de atraso (\textit{delay})} nas respostas, apresentado no \autoref{lst:msw-delay}, forçando a interface a lidar com estados de carregamento de forma realista.
 
-\begin{lstlisting}[language=TypeScript, caption={Simulação de Delay Realista no \gls{MSW}}, label={lst:msw-delay}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:msw-delay}Simulação de Delay Realista no \gls{MSW}}
+\begin{lstlisting}[language=TypeScript]
 export function withDelay(durationMs = 1000) {
   const isTest = process.env.NODE_ENV === 'test'
   const finalDuration = isTest ? 0 : durationMs
@@ -200,10 +206,14 @@ export function withDelay(durationMs = 1000) {
     }
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-Também foi desenvolvida uma lógica de \textbf{autenticação falsa (\textit{fake auth})} no \textit{middleware} do \gls{MSW} (\autoref{lst:msw-auth}), garantindo que as rotas protegidas e os cabeçalhos de autorização fossem validados antes de retornar os dados simulados.
+Também foi desenvolvida uma lógica de \textbf{autenticação falsa (\textit{fake auth})} no \textit{middleware} do \gls{MSW}, exibido no \autoref{lst:msw-auth}, garantindo que as rotas protegidas e os cabeçalhos de autorização fossem validados antes de retornar os dados simulados.
 
-\begin{lstlisting}[language=TypeScript, caption={Middleware de Autenticação Fake no Mock}, label={lst:msw-auth}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:msw-auth}Middleware de Autenticação Fake no Mock}
+\begin{lstlisting}[language=TypeScript]
 export function withAuth(resolver: HttpResponseResolver): HttpResponseResolver {
   return (context) => {
     const { request } = context
@@ -214,10 +224,14 @@ export function withAuth(resolver: HttpResponseResolver): HttpResponseResolver {
   }
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-A arquitetura do \textit{mock} reflete a modularidade do sistema. Em vez de um único arquivo monolítico, cada módulo funcional possui seus próprios \textit{handlers}. Estes são exportados de seus respectivos domínios e agrupados no arquivo central \texttt{handlers.ts} (\autoref{lst:msw-handlers}) dentro da pasta \texttt{core/mocks}, que orquestra e fornece o \textit{array} consolidado de interceptadores para o \textit{worker} inicializar a aplicação.
+A arquitetura do \textit{mock} reflete a modularidade do sistema. Em vez de um único arquivo monolítico, cada módulo funcional possui seus próprios \textit{handlers}. Estes são exportados de seus respectivos domínios e agrupados no arquivo central \texttt{handlers.ts}, ilustrado no \autoref{lst:msw-handlers}, dentro da pasta \texttt{core/mocks}, que orquestra e fornece o \textit{array} consolidado de interceptadores para o \textit{worker} inicializar a aplicação.
 
-\begin{lstlisting}[language=TypeScript, caption={Registro Modular de Handlers no \gls{MSW}}, label={lst:msw-handlers}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:msw-handlers}Registro Modular de Handlers no \gls{MSW}}
+\begin{lstlisting}[language=TypeScript]
 import { type HttpHandler } from 'msw'
 import {
   createAnimalHandler,
@@ -238,12 +252,16 @@ export const handlers: HttpHandler[] = [
   // ... demais handlers de todos os modulos
 ]
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 \subsection{Organização Modular e Estrutura de Pastas}\label{subsec:estruturaPastas}
 
 Para manter a consistência e escalabilidade, cada módulo funcional segue uma estrutura de pastas rigorosa. A \autoref{lst:folder-structure} ilustra a organização do módulo de \textbf{Animais}, que serve como padrão para toda a aplicação. Esta separação permite que a lógica de domínio seja agnóstica à tecnologia de visualização e outras bibliotecas.
 
-\begin{lstlisting}[caption={Estrutura de Pastas Padronizada (Módulo Animais)}, label={lst:folder-structure}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:folder-structure}Estrutura de Pastas Padronizada (Módulo Animais)}
+\begin{lstlisting}[]
 src/app/modules/animals/
 |-- domain/            # Entidades e contratos agnósticos
 |   |-- models/
@@ -263,12 +281,16 @@ src/app/modules/animals/
     |-- types/         # Tipos específicos da interface
     |-- validations/   # Esquemas Zod para validação
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 \subsection{Camada de Domínio}\label{subsec:camadaDominio}
 
-A camada de \textbf{Domain} é o ponto de partida, onde se definem as entidades e os contratos (casos de uso). Esta camada é dividida em modelos de dados (\autoref{lst:animal-models}) e definições de casos de uso (\autoref{lst:animal-use-cases}), garantindo que a regra de negócio seja expressa de forma pura, sem dependências de infraestrutura.
+A camada de \textbf{Domain} é o ponto de partida, em que se definem as entidades e os contratos (casos de uso). Esta camada é dividida em modelos de dados e definições de casos de uso, ilustrados, respectivamente, no \autoref{lst:animal-models} e no \autoref{lst:animal-use-cases}, garantindo que a regra de negócio seja expressa de forma pura, sem dependências de infraestrutura.
 
-\begin{lstlisting}[language=TypeScript, caption={Modelos de Dados do Domínio}, label={lst:animal-models}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-models}Modelos de Dados do Domínio}
+\begin{lstlisting}[language=TypeScript]
 export type AnimalDetailsModel = {
   name: string
   breed: Option
@@ -295,10 +317,14 @@ export type AnimalModel = WithId<{
 
 export type AnimalApiResponse = AnimalModel
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 Os contratos de caso de uso padronizam como a aplicação interage com os dados de animais. A \autoref{lst:animal-use-cases} exibe o \gls{CRUD} completo, utilizando tipos genéricos para garantir a consistência de parâmetros e respostas em todas as operações.
 
-\begin{lstlisting}[language=TypeScript, caption={Contratos de Casos de Uso (\gls{CRUD}) no Domínio}, label={lst:animal-use-cases}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-use-cases}Contratos de Casos de Uso (\gls{CRUD}) no Domínio}
+\begin{lstlisting}[language=TypeScript]
 // domain/use-cases/create-animal-use-case.ts
 export type CreateAnimalUseCase = RequestInterface<
   { propertyId: number; animal: AnimalDetailsModel },
@@ -329,12 +355,16 @@ export type UpdateAnimalUseCase = RequestInterface<
   void
 >
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 \subsection{Camada de Dados}\label{subsec:camadaDados}
 
 A camada de \textbf{Data} é responsável por implementar as interfaces definidas no domínio, comunicando-se com serviços externos ou \gls{API}s. Todos os casos de uso do domínio possuem suas respectivas classes \texttt{Remote} na camada de dados. A \autoref{lst:animal-data} ilustra como essas implementações utilizam o \texttt{HttpClient} para realizar requisições de rede e tratam as respostas e erros, mapeando-os para exceções de negócio compreensíveis.
 
-\begin{lstlisting}[language=TypeScript, caption={Implementações da Camada Data (\gls{CRUD})}, label={lst:animal-data}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-data}Implementações da Camada Data (\gls{CRUD})}
+\begin{lstlisting}[language=TypeScript]
 // data/use-cases/remote-create-animal-use-case.ts
 export class RemoteCreateAnimalUseCase implements CreateAnimalUseCase {
   constructor(
@@ -530,12 +560,16 @@ export class RemoteUpdateAnimalUseCase implements UpdateAnimalUseCase {
   }
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 \subsection{Camada Main (Fábricas)}\label{subsec:camadaMain}
 
-A camada \textbf{Main} atua como \textit{Composition Root}, utilizando o padrão \textit{Factory} para instanciar as classes da camada \textit{Data} injetando as dependências necessárias. Essa abordagem protege a interface gráfica de precisar conhecer detalhes de infraestrutura, como o cliente \gls{HTTP} ou \gls{URL}s específicas da \gls{API}. A \autoref{lst:animal-main} ilustra as fábricas de todo o ciclo de vida de dados do módulo.
+A camada \textbf{Main} atua como \textit{Composition Root}, utilizando o padrão de projetos \textit{Factory} para instanciar as classes da camada \textit{Data} injetando as dependências necessárias. Essa abordagem protege a interface gráfica de precisar conhecer detalhes de infraestrutura, como o cliente \gls{HTTP} ou \gls{URL}s específicas da \gls{API}. A \autoref{lst:animal-main} ilustra as fábricas de todo o ciclo de vida de dados do módulo.
 
-\begin{lstlisting}[language=TypeScript, caption={Fábricas de Injeção de Dependências}, label={lst:animal-main}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-main}Fábricas de Injeção de Dependências}
+\begin{lstlisting}[language=TypeScript]
 // main/factories/use-cases/remote-create-animal-use-case-factory.ts
 export function makeRemoteCreateAnimalUseCase(): CreateAnimalUseCase {
   return new RemoteCreateAnimalUseCase(
@@ -580,12 +614,16 @@ export function makeRemoteUpdateAnimalUseCase(): UpdateAnimalUseCase {
   )
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 \subsection{Camada de Mocks}\label{subsec:camadaMocks}
 
-A camada de \textbf{Mocks} é fundamental para a agilidade no desenvolvimento. Ela contém os \textit{handlers} do \gls{MSW} que interceptam especificamente as rotas deste módulo (\autoref{lst:animal-mock}). Isso permite simular o comportamento completo da \gls{API} oficial, mantendo um estado interno persistente durante a sessão para permitir testes reais de criação, edição e exclusão sem depender do \textit{backend}.
+A camada de \textbf{Mocks} é fundamental para melhorar a experiência no desenvolvimento. Ela contém os \textit{handlers} do \gls{MSW} que interceptam especificamente as rotas deste módulo, conforme o \autoref{lst:animal-mock}. Isso permite simular o comportamento completo da \gls{API} oficial, mantendo um estado interno persistente durante a sessão para permitir testes reais de criação, edição e exclusão sem depender do \textit{backend}.
 
-\begin{lstlisting}[language=TypeScript, caption={Handlers \gls{MSW} para Simulação de \gls{API}}, label={lst:animal-mock}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-mock}Handlers \gls{MSW} para Simulação de \gls{API}}
+\begin{lstlisting}[language=TypeScript]
 // mocks/handlers/create-animal-handler.ts
 export const createAnimalHandler = httpWithMiddleware<
   PathParams<'propertyId'>,
@@ -716,6 +754,8 @@ export const updateAnimalHandler = httpWithMiddleware<
     HttpResponse.json(undefined, { status: HttpStatusCode.noContent }),
 })
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
 \subsection{Camada de Apresentação (Presentation)}\label{subsec:camadaApresentacao}
 
@@ -730,9 +770,11 @@ A camada de \textbf{Presentation} é o ponto de convergência que materializa as
     \item \texttt{types/}: Definições de tipos exclusivas para a interface.
 \end{itemize}
 
-O fluxo de dados se inicia pelo \textbf{Contexto} (\autoref{lst:animal-context}), que centraliza informações como o identificador da propriedade e o animal selecionado, provendo funções de controle para abertura de formulários e diálogos, eliminando a necessidade de repasse manual de propriedades (\textit{prop drilling}).
+O fluxo de dados se inicia pelo \textbf{Contexto}, ilustrado no \autoref{lst:animal-context}, o qual centraliza informações como o identificador da propriedade e o animal selecionado, provendo funções de controle para abertura de formulários e diálogos, eliminando a necessidade de repasse manual de propriedades (\textit{prop drilling}).
 
-\begin{lstlisting}[language=TypeScript, caption={Gerenciamento de Estado no Context \gls{API}}, label={lst:animal-context}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-context}Gerenciamento de Estado no Context \gls{API}}
+\begin{lstlisting}[language=TypeScript]
 type AnimalContextValue = {
   propertyId: number
   filters: AnimalFilters
@@ -846,10 +888,14 @@ export function AnimalProvider({ children }: Readonly<PropsWithChildren>) {
   )
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-Os \textbf{Hooks} atuam como pontes entre os casos de uso e os componentes. O \texttt{useAnimalsQuery} (\autoref{lst:animal-hook}) encapsula a lógica de busca real, delegando ao \textbf{TanStack Query} o gerenciamento do estado assíncrono, cache e revalidação. O uso do \texttt{useEffect} acoplado à biblioteca \texttt{react-hot-toast} gerencia o \textit{feedback} visual de erros para o usuário.
+Os \textbf{Hooks} atuam como pontes entre os casos de uso e os componentes. O \texttt{useAnimalsQuery}, exibido no \autoref{lst:animal-hook}, encapsula a lógica de busca real, delegando ao \textbf{TanStack Query} o gerenciamento do estado assíncrono, cache e revalidação. O uso do \texttt{useEffect} acoplado à biblioteca \texttt{react-hot-toast} gerencia o \textit{feedback} visual de erros para o usuário.
 
-\begin{lstlisting}[language=TypeScript, caption={Hook de Integração com TanStack Query}, label={lst:animal-hook}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-hook}Hook de Integração com TanStack Query}
+\begin{lstlisting}[language=TypeScript]
 export function useAnimalsQuery({ propertyId, filters, page, sort }: Props) {
   const getAnimalsUseCase = makeRemoteGetAnimalsUseCase()
 
@@ -885,10 +931,14 @@ export function useAnimalsQuery({ propertyId, filters, page, sort }: Props) {
   }
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-Na subpasta \textbf{Components}, os elementos visuais focam apenas em renderização. O \texttt{AnimalDataTable} (\autoref{lst:animal-table}) abstrai a complexidade da listagem, consumindo os estados de paginação e ordenação do seu próprio gancho e renderizando os dados através de um componente de tabela genérico construído na camada \texttt{core}.
+Na subpasta \textbf{Components}, os elementos visuais focam apenas em renderização. O \texttt{AnimalDataTable}, apresentado no \autoref{lst:animal-table}, abstrai a complexidade da listagem, consumindo os estados de paginação e ordenação do seu próprio gancho e renderizando os dados através de um componente de tabela genérico construído na camada \texttt{core}.
 
-\begin{lstlisting}[language=TypeScript, caption={Componente AnimalDataTable Focado em Renderização}, label={lst:animal-table}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-table}Componente AnimalDataTable Focado em Renderização}
+\begin{lstlisting}[language=TypeScript]
 // presentation/components/animal-data-table/animal-data-table.tsx
 export function AnimalDataTable({ onClickRow }: Readonly<AnimalDataTableProps>) {
   const { columns, animals, isLoading, page, sort, setSort, setPage } = useAnimalDataTable()
@@ -984,15 +1034,23 @@ export function useAnimalDataTable() {
   }
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-As definições de tipos para filtros e ordenação (\autoref{lst:animal-types}) e as validações de formulário via Zod (\autoref{lst:animal-validations}) garantem a integridade dos dados e a segurança de tipos em toda a camada visual.
+As definições de tipos para filtros e ordenação, apresentadas no \autoref{lst:animal-types}, e as validações de formulário via Zod, ilustradas no \autoref{lst:animal-validations}, garantem a integridade dos dados e a segurança de tipos em toda a camada visual. Sempre que uma tela necessitar filtros e ordenação ou validação de formulários, o mesmo padrão será utilizado.
 
-\begin{lstlisting}[language=TypeScript, caption={Tipos da Camada de Apresentação}, label={lst:animal-types}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-types}Tipos da Camada de Apresentação}
+\begin{lstlisting}[language=TypeScript]
 export type AnimalFilters = Filters<AnimalModel>
 export type AnimalSort = Sort<AnimalModel>
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-\begin{lstlisting}[language=TypeScript, caption={Esquema de Validação com Zod}, label={lst:animal-validations}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-validations}Esquema de Validação com Zod}
+\begin{lstlisting}[language=TypeScript]
 export const animalFormSchema = z.object({
   name: z.string().min(1, { message: 'Nome é obrigatório' }),
   breed: optionSchema.refine(({ label, value }) => label !== '' && value > 0, {
@@ -1000,10 +1058,14 @@ export const animalFormSchema = z.object({
   }),
 })
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-A interação do usuário com os dados é mediada pelos formulários, que são implementados seguindo o princípio da composição e da reutilização de componentes. O módulo de animais conta com formulários específicos para criação e edição. O componente \texttt{AnimalFormInputs} (\autoref{lst:animal-form-inputs}) centraliza os campos comuns entre a criação e a edição, utilizando o \texttt{useFormContext} da biblioteca \texttt{react-hook-form} para acessar o estado do formulário de forma desacoplada, permitindo que a lógica de UI seja separada da lógica de persistência.
+A interação do usuário com os dados é mediada pelos formulários, que são implementados seguindo o princípio da composição e da reutilização de componentes. O módulo de animais conta com formulários específicos para criação e edição. O componente \texttt{AnimalFormInputs}, exibido no \autoref{lst:animal-form-inputs}, centraliza os campos comuns entre a criação e a edição, utilizando o \texttt{useFormContext} da biblioteca \texttt{react-hook-form} para acessar o estado do formulário de forma desacoplada, permitindo que a lógica de UI seja separada da lógica de persistência.
 
-\begin{lstlisting}[language=TypeScript, caption={Composição de Campos do Formulário}, label={lst:animal-form-inputs}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animal-form-inputs}Composição de Campos do Formulário}
+\begin{lstlisting}[language=TypeScript]
 export function AnimalFormInputs() {
   const form = useFormContext<AnimalFormSchema>()
   const [searchBreed, setSearchBreed] = useState('')
@@ -1050,10 +1112,14 @@ export function AnimalFormInputs() {
   )
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-A lógica de submissão e o gerenciamento do estado de rede são isolados em componentes como o \texttt{CreateAnimalForm} (\autoref{lst:create-animal-form}). Este componente utiliza o \textit{hook} \texttt{useMutation} da biblioteca \texttt{TanStack Query} para disparar o caso de uso de criação. A integração com o componente \texttt{Sheet} (uma barra lateral deslizante) permite que o usuário adicione novos registros sem perder o contexto da listagem principal, melhorando a usabilidade e o fluxo de trabalho.
+A lógica de submissão e o gerenciamento do estado de rede são isolados em componentes como o \texttt{CreateAnimalForm}, ilustrado no \autoref{lst:create-animal-form}. Este componente utiliza o \textit{hook} \texttt{useMutation} da biblioteca \texttt{TanStack Query} para disparar o caso de uso de criação. A integração com o componente \texttt{Sheet} (uma barra lateral deslizante) permite que o usuário adicione novos registros sem perder o contexto da listagem principal, melhorando a usabilidade e o fluxo de trabalho.
 
-\begin{lstlisting}[language=TypeScript, caption={Lógica de Criação no Formulário}, label={lst:create-animal-form}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:create-animal-form}Lógica de Criação no Formulário}
+\begin{lstlisting}[language=TypeScript]
 export function CreateAnimalForm() {
   const { propertyId, isOpenNewAnimalForm, closeNewAnimalForm } = useAnimalContext()
   const createAnimalUseCase = makeRemoteCreateAnimalUseCase()
@@ -1093,10 +1159,14 @@ export function CreateAnimalForm() {
   )
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-Finalmente, as \textbf{Screens} reúnem todos esses elementos. A tela principal (\autoref{lst:animals-screen}) provê o \texttt{AnimalProvider} para toda a árvore de componentes e decide entre exibir a listagem ou os detalhes de um animal específico (sub-abas). Essa padronização arquitetural, separando o contexto, os ganchos, os componentes de \gls{UI} e as regras de negócio de ponta a ponta, foi replicada rigorosamente em todos os módulos do sistema, garantindo uniformidade e alta escalabilidade.
+Finalmente, as \textbf{Screens} reúnem todos esses elementos. A tela principal, apresentada no \autoref{lst:animals-screen}, provê o \texttt{AnimalProvider} para toda a árvore de componentes e decide entre exibir a listagem ou os detalhes de um animal específico (sub-abas). Essa padronização arquitetural, separando o contexto, os ganchos, os componentes de \gls{UI} e as regras de negócio de ponta a ponta, foi replicada rigorosamente em todos os módulos do sistema, garantindo uniformidade e alta escalabilidade.
 
-\begin{lstlisting}[language=TypeScript, caption={Renderização Declarativa na Página de Animais}, label={lst:animals-screen}]
+\begin{sourcecode}[htb]
+\caption{\label{lst:animals-screen}Renderização Declarativa na Página de Animais}
+\begin{lstlisting}[language=TypeScript]
 export function AnimalsScreen() {
   const [animalId, setAnimalId] = useState<number | null>(null)
   // ... definicao de abas e estados
@@ -1124,5 +1194,9 @@ export function AnimalsScreen() {
   )
 }
 \end{lstlisting}
+\fonte{}
+\end{sourcecode}
 
-Com a implementação detalhada das camadas de domínio, infraestrutura e apresentação, o cliente web  consolida uma arquitetura robusta e escalável. A separação clara de responsabilidades permitiu o desenvolvimento de funcionalidades complexas de forma modular, garantindo que as regras de negócio permaneçam protegidas de mudanças tecnológicas na interface ou na persistência de dados. Este capítulo detalhou como os padrões de projeto e as tecnologias escolhidas se articulam para entregar uma ferramenta eficiente e moderna no auxílio à gestão do gado leiteiro.
+Com a implementação detalhada das camadas de domínio, infraestrutura e apresentação, o cliente web possui uma arquitetura escalável. A separação clara de responsabilidades permitiu o desenvolvimento de funcionalidades complexas de forma modular, garantindo que as regras de negócio permaneçam protegidas de mudanças tecnológicas na interface ou na persistência de dados. Este capítulo detalhou como os padrões de projeto e as tecnologias escolhidas se articulam para entregar uma ferramenta eficiente e moderna no auxílio à gestão do gado leiteiro.
+
+Todo o código-fonte desenvolvido para este cliente web está público e pode ser acessado na íntegra no repositório oficial do projeto: \url{https://github.com/utfprapps-pb/idr-web}.

@@ -45,7 +45,7 @@ Com o objetivo de satisfazer as necessidades dos animais, torna-se imprescindív
 
 Visando atender às necessidades nutricionais dos animais, foram definidos métodos práticos para formulação de rações \cite{Salman2020:ManualFormulacaoRacaoVacasLeiteiras}. Sendo eles, o método algébrico e o método do quadrado de Pearson.
 
-O método algébrico, viabiliza a fusão de dois ou mais componentes e envolve a formulação de um sistema de equações simultâneas, onde as incógnitas correspondem aos componentes a serem incorporados na ração. A complexidade desse método aumenta de maneira gradual à medida que se incluem um maior número de componentes e nutrientes no cálculo.
+O método algébrico, viabiliza a fusão de dois ou mais componentes e envolve a formulação de um sistema de equações simultâneas, em que as incógnitas correspondem aos componentes a serem incorporados na ração. A complexidade desse método aumenta de maneira gradual à medida que se incluem um maior número de componentes e nutrientes no cálculo.
 
 Um exemplo prático desse método pode ser ilustrado ao considerar uma ração concentrada com 18\% de \gls{PB}, composta por farelo de algodão (representado como X) e grãos de milho (representados como Y) em uma quantidade total de 100 kg, valores baseados em \citeonline{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}. A equação que modela essa situação é a seguinte:
 
@@ -98,7 +98,7 @@ O Método do Quadrado de Pearson, é de natureza direta e permite a determinaç�
 
 Um exemplo prático que ilustra este método é o balanceamento de uma ração concentrada contendo 18\% de \gls{PB} e 80\% de \gls{NDT} utilizando o método do Quadrado de Pearson. Neste método, consideramos os teores de proteína dos ingredientes disponíveis, como o grão de milho moído e o farelo de soja, com teores de 9,82\% e 47,64\% de \gls{PB}, respectivamente, valores baseados em \citeonline{Salman:2011:ManualFormulacaoRacaoVacasLeiteiras}.
 
-O processo inicia-se pela construção de um esquema quadrado, onde o valor do teor de \gls{PB} da mistura é colocado no centro do quadrado. À esquerda, são inseridos os teores de \gls{PB} dos dois ingredientes da mistura, enquanto à direita são registradas as diferenças numéricas entre os valores dos ingredientes e o teor de \gls{PB} da mistura, sendo: 
+O processo inicia-se pela construção de um esquema quadrado, no qual o valor do teor de \gls{PB} da mistura é colocado no centro do quadrado. À esquerda, são inseridos os teores de \gls{PB} dos dois ingredientes da mistura, enquanto à direita são registradas as diferenças numéricas entre os valores dos ingredientes e o teor de \gls{PB} da mistura, sendo: 
 \begin{equation}
   \label{eq:pearson1}
   18 - 9,82 = 8,18
@@ -134,7 +134,7 @@ As camadas fundamentais geralmente incluem:
     \item \textbf{Entidades (Domain):} Contêm as regras de negócio cruciais e objetos de domínio. São o ponto mais interno e estável da arquitetura.
     \item \textbf{Casos de Uso (Data/Use Cases):} Orquestram o fluxo de dados de e para as entidades, implementando as regras de negócio específicas da aplicação.
     \item \textbf{Adaptadores de Interface (Infra/Gateways):} Convertem dados no formato mais conveniente para os casos de uso e entidades (ex: conversores de \gls{API} \gls{REST}).
-    \item \textbf{Frameworks e Drivers (Presentation/UI):} Camada onde residem ferramentas como React e detalhes de interface.
+    \item \textbf{Frameworks e Drivers (Presentation/UI):} Camada na qual residem ferramentas como React e detalhes de interface.
 \end{itemize}
 
 Ao adotar esses princípios, o desenvolvimento do \textit{idr-web} busca garantir que a lógica de manejo e balanceamento nutricional esteja isolada das complexidades da interface visual, permitindo evoluções modulares e manutenção simplificada.

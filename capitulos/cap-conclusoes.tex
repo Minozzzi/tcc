@@ -1,35 +1,11 @@
 \chapter{Conclusão}\label{cap:conclusao}
 
-O presente trabalho descreveu o desenvolvimento de um cliente \textit{web} robusto para o gerenciamento de gado leiteiro, focado em atender às necessidades dos técnicos do \gls{IDR-PR}. Com a conclusão do projeto, observa-se que a ferramenta não apenas cumpre os requisitos de coleta e armazenamento de dados, mas evolui para um sistema de suporte à decisão, essencial para a modernização da pecuária leiteira no estado do Paraná.
+O presente trabalho descreveu o desenvolvimento de um cliente \textit{web} para o gerenciamento de gado leiteiro, focado em atender às necessidades dos técnicos do \gls{IDR-PR}. Com a conclusão do projeto, observa-se que a ferramenta não apenas cumpre os requisitos de coleta e armazenamento de dados, mas evolui para um sistema de suporte à decisão, essencial para a modernização da pecuária leiteira no estado do Paraná.
 
-\section{Avaliação de Objetivos e Requisitos}\label{sec:avaliacaoObjetivos}
+Ao avaliar o percurso de desenvolvimento, verifica-se que o objetivo geral e específicos foram alcançados. O sistema desenvolvido provê uma interface moderna e centralizada que substitui com eficácia os fluxos baseados em planilhas eletrônicas. Dentre os objetivos específicos atingidos, implementou-se um fluxo de cadastro e listagem modular de propriedades, permitindo a organização de dados por categorias (terra, colaboradores, localização) e facilitando a recuperação de informações via filtros. O controle zootécnico e histórico em formato de prontuário eletrônico permite o acompanhamento detalhado de cada animal, centralizando registros de reprodução e saúde em um único local. A funcionalidade de balanceamento nutricional é uma das principais contribuições do projeto. Ao apresentar indicadores visuais de conformidade baseados nas exigências científicas enviadas pela \gls{API}, o sistema reduz a margem de erro no manejo alimentar. A validação por meio de testes manuais sistemáticos confirmou que o comportamento da interface respeita as regras de negócio complexas do Instituto, garantindo uma ferramenta confiável para o uso diário dos técnicos.
 
-Ao avaliar o percurso de desenvolvimento, verifica-se que o objetivo geral foi plenamente alcançado. O sistema desenvolvido provê uma interface moderna e centralizada que substitui com eficácia os fluxos baseados em planilhas eletrônicas.
+A adoção da \textit{Clean Architecture} trouxe vantagens para o software, especialmente relacionadas ao desacoplamento entre a lógica de negócio e a interface. O uso de tecnologias como TanStack Query e Zod permitiram uma gestão de estado eficiente e validações de dados antes de qualquer persistência, evitando chamadas desnecessárias à \gls{API} no caso de formulários preenchidos incorretamente por parte do usuário. Como limitações identificadas durante o desenvolvimento, ressalta-se a dependência de uma conexão de rede ativa para a sincronização completa dos dados. Embora o uso de \gls{MSW} tenha permitido validar as interfaces mesmo sem o \textit{backend} finalizado, a implementação de uma camada de persistência local no navegador (estratégia \textit{Offline First}) é um ponto que não foi totalmente coberto neste escopo inicial.
 
-Dentre os objetivos específicos atingidos, destacam-se:
-\begin{itemize}
-    \item \textbf{Gestão Eficiente de Propriedades:} Implementou-se um fluxo de cadastro e listagem modular, permitindo a organização de dados por categorias (terra, colaboradores, localização) e facilitando a recuperação de informações via filtros inteligentes.
-    \item \textbf{Controle Zootécnico e Histórico:} A interface de prontuário eletrônico permite o acompanhamento detalhado de cada animal, centralizando registros de reprodução e saúde em um único local.
-    \item \textbf{Suporte à Decisão Nutricional:} A funcionalidade de balanceamento nutricional automatizado demonstrou ser o ponto alto tecnológico do projeto. Ao apresentar indicadores visuais de conformidade baseados nas exigências científicas enviadas pela \gls{API}, o sistema reduz drásticamente a margem de erro no manejo alimentar.
-\end{itemize}
+Como o \textit{idr-web} foi concebido como um software vivo e de evolução contínua, novos módulos e melhorias já estão planejados para as próximas iterações do projeto junto ao \gls{IDR-PR}. Como sugestão para evoluções futuras, elencam-se a implementação do controle de níveis de acesso com refinamento do sistema de permissões, e a criação do módulo de gestão financeira com o controle de receitas, despesas e fluxos de caixa. É sugerido também o desenvolvimento de um fluxo de visita regular guiado através de um assistente interativo (\textit{wizard}), a refatoração para uma entidade produtor dedicada desvinculada das propriedades, e a expansão para capacidade \textit{offline} nativa através do uso de \textit{Service Workers} e \textit{IndexedDB}, visando zonas rurais sem cobertura de internet.
 
-A validação por meio de testes manuais sistemáticos confirmou que o comportamento da interface respeita as regras de negócio complexas do Instituto, garantindo uma ferramenta confiável para o uso diário dos técnicos.
-
-\section{Vantagens e Limitações}\label{sec:vantagensLimitacoes}
-
-A adoção da \textit{Clean Architecture} trouxe vantagens competitivas para o software, especialmente no que tange ao desacoplamento entre a lógica de negócio e a interface. O uso de tecnologias como TanStack Query e Zod elevou a robustez da aplicação, permitindo uma gestão de estado eficiente e validações de dados rigorosas antes de qualquer persistência.
-
-Como limitações identificadas durante o desenvolvimento, ressalta-se a dependência de uma conexão de rede ativa para a sincronização completa dos dados. Embora o uso de \gls{MSW} tenha permitido validar as interfaces mesmo sem o \textit{backend} finalizado, a implementação de uma camada de persistência local mais profunda no navegador (estratégia \textit{Offline First}) é um ponto que não foi totalmente coberto neste escopo inicial.
-
-\section{Perspectivas e Trabalhos Futuros}\label{sec:trabalhosFuturos}
-
-Como o \textit{idr-web} foi concebido como um software vivo e de evolução contínua, novos módulos e melhorias já estão planejados para as próximas iterações do projeto junto ao Instituto. Como sugestão para evoluções futuras, elencam-se os seguintes pontos:
-\begin{itemize}
-    \item \textbf{Controle de Níveis de Acesso:} Refinamento do sistema de permissões para permitir granularidade total sobre quais módulos cada tipo de técnico ou administrador pode visualizar ou editar.
-    \item \textbf{Módulo de Gestão Financeira:} Implementação completa do controle de receitas, despesas e fluxos de caixa integrados às atividades produtivas.
-    \item \textbf{Fluxo de Visita Regular Guiado:} Desenvolvimento de um assistente interativo (\textit{wizard}) que conduza o técnico passo a passo durante a visita, embora as abas atuais já permitam a realização modular de todos os registros.
-    \item \textbf{Entidade Produtor Dedicada:} Refatoração da estrutura de dados para desacoplar as informações do produtor da entidade propriedade, permitindo relacionamentos complexos de "muitos-para-muitos" e históricos de propriedade.
-    \item \textbf{Capacidade Offline Nativa:} Expansão para o uso de \textit{Service Workers} e \textit{IndexedDB} para permitir que o técnico realize o preenchimento completo em zonas rurais sem cobertura de internet.
-\end{itemize}
-
-Conclui-se que o sistema desenvolvido representa um salto qualitativo na digitalização dos processos do \gls{IDR-PR}, oferecendo uma base tecnológica sólida para a melhoria da produtividade e sustentabilidade das propriedades rurais paranaenses.
+Conclui-se que o sistema desenvolvido representa avanços significativos na digitalização dos processos do \gls{IDR-PR}, oferecendo recursos importantes para auxiliar na melhoria da produtividade e sustentabilidade das propriedades rurais paranaenses.
