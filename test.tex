@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{caption}
+\usepackage{listings}
+
+\newenvironment{sourcecode}{}{}
+\newcommand{\fonte}{\caption*{Fonte: Autoria propria.}}
+
+\setlength{\parindent}{1.5cm}
+
+\begin{document}
+Paragraph 1 is here. It should be indented if the class supports it, but article first para is not indented.
+
+Paragraph 2 is indented.
+
+\begin{center}
+\captionof{sourcecode}{My Code}
+\end{center}
+\vspace{-\baselineskip}
+\begin{lstlisting}
+code
+\end{lstlisting}
+\vspace{-0.5\baselineskip}
+\begin{center}
+\begingroup\setcaptiontype{sourcecode}\fonte{}\endgroup
+\end{center}
+
+Paragraph 3 should be indented.
+
+Paragraph 4 is indented.
+\end{document}

@@ -1,18 +1,18 @@
-\contentsline {sourcecode}{\numberline {1}{\ignorespaces Contrato Genérico de HttpClient}}{52}{sourcecode.caption.40}%
-\contentsline {sourcecode}{\numberline {2}{\ignorespaces Simulação de Delay Realista no \gls {MSW}}}{52}{sourcecode.caption.41}%
-\contentsline {sourcecode}{\numberline {3}{\ignorespaces Middleware de Autenticação Fake no Mock}}{53}{sourcecode.caption.42}%
-\contentsline {sourcecode}{\numberline {4}{\ignorespaces Registro Modular de Handlers no \gls {MSW}}}{53}{sourcecode.caption.43}%
-\contentsline {sourcecode}{\numberline {5}{\ignorespaces Estrutura de Pastas Padronizada (Módulo Animais)}}{54}{sourcecode.caption.44}%
-\contentsline {sourcecode}{\numberline {6}{\ignorespaces Modelos de Dados do Domínio}}{55}{sourcecode.caption.45}%
-\contentsline {sourcecode}{\numberline {7}{\ignorespaces Contratos de Casos de Uso (\gls {CRUD}) no Domínio}}{56}{sourcecode.caption.46}%
-\contentsline {sourcecode}{\numberline {8}{\ignorespaces Implementações da Camada Data (\gls {CRUD})}}{58}{sourcecode.caption.47}%
-\contentsline {sourcecode}{\numberline {9}{\ignorespaces Fábricas de Injeção de Dependências}}{59}{sourcecode.caption.48}%
-\contentsline {sourcecode}{\numberline {10}{\ignorespaces Handlers \gls {MSW} para Simulação de \gls {API}}}{60}{sourcecode.caption.49}%
-\contentsline {sourcecode}{\numberline {11}{\ignorespaces Gerenciamento de Estado no Context \gls {API}}}{61}{sourcecode.caption.50}%
-\contentsline {sourcecode}{\numberline {12}{\ignorespaces Hook de Integração com TanStack Query}}{62}{sourcecode.caption.51}%
-\contentsline {sourcecode}{\numberline {13}{\ignorespaces Componente AnimalDataTable Focado em Renderização}}{63}{sourcecode.caption.52}%
-\contentsline {sourcecode}{\numberline {14}{\ignorespaces Tipos da Camada de Apresentação}}{64}{sourcecode.caption.53}%
-\contentsline {sourcecode}{\numberline {15}{\ignorespaces Esquema de Validação com Zod}}{64}{sourcecode.caption.54}%
-\contentsline {sourcecode}{\numberline {16}{\ignorespaces Composição de Campos do Formulário}}{65}{sourcecode.caption.55}%
-\contentsline {sourcecode}{\numberline {17}{\ignorespaces Lógica de Criação no Formulário}}{66}{sourcecode.caption.56}%
-\contentsline {sourcecode}{\numberline {18}{\ignorespaces Renderização Declarativa na Página de Animais}}{67}{sourcecode.caption.57}%
+\contentsline {sourcecode}{\numberline {1}{\ignorespaces Contrato Genérico de HttpClient}}{51}{sourcecode.4.1}%
+\contentsline {sourcecode}{\numberline {2}{\ignorespaces Simulação de Delay Realista no \gls {MSW}}}{52}{sourcecode.4.2}%
+\contentsline {sourcecode}{\numberline {3}{\ignorespaces Middleware de Autenticação Fake no Mock}}{53}{sourcecode.4.3}%
+\contentsline {sourcecode}{\numberline {4}{\ignorespaces Registro Modular de Handlers no \gls {MSW}}}{53}{sourcecode.4.4}%
+\contentsline {sourcecode}{\numberline {5}{\ignorespaces Estrutura de Pastas Padronizada (Módulo Animais)}}{54}{sourcecode.4.5}%
+\contentsline {sourcecode}{\numberline {6}{\ignorespaces Modelos de Dados do Domínio}}{55}{sourcecode.4.6}%
+\contentsline {sourcecode}{\numberline {7}{\ignorespaces Contratos de Casos de Uso (\gls {CRUD}) no Domínio}}{56}{sourcecode.4.7}%
+\contentsline {sourcecode}{\numberline {8}{\ignorespaces Implementações da Camada Data (\gls {CRUD})}}{57}{sourcecode.4.8}%
+\contentsline {sourcecode}{\numberline {9}{\ignorespaces Fábricas de Injeção de Dependências}}{63}{sourcecode.4.9}%
+\contentsline {sourcecode}{\numberline {10}{\ignorespaces Handlers \gls {MSW} para Simulação de \gls {API}}}{65}{sourcecode.4.10}%
+\contentsline {sourcecode}{\numberline {11}{\ignorespaces Gerenciamento de Estado no Context \gls {API}}}{69}{sourcecode.4.11}%
+\contentsline {sourcecode}{\numberline {12}{\ignorespaces Hook de Integração com TanStack Query}}{73}{sourcecode.4.12}%
+\contentsline {sourcecode}{\numberline {13}{\ignorespaces Componente AnimalDataTable Focado em Renderização}}{74}{sourcecode.4.13}%
+\contentsline {sourcecode}{\numberline {14}{\ignorespaces Tipos da Camada de Apresentação}}{78}{sourcecode.4.14}%
+\contentsline {sourcecode}{\numberline {15}{\ignorespaces Esquema de Validação com Zod}}{78}{sourcecode.4.15}%
+\contentsline {sourcecode}{\numberline {16}{\ignorespaces Composição de Campos do Formulário}}{78}{sourcecode.4.16}%
+\contentsline {sourcecode}{\numberline {17}{\ignorespaces Lógica de Criação no Formulário}}{80}{sourcecode.4.17}%
+\contentsline {sourcecode}{\numberline {18}{\ignorespaces Renderização Declarativa na Página de Animais}}{81}{sourcecode.4.18}%
